@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { getSession } from '../lib/session';
+
+const session = await getSession(Astro.cookies);
+
+if (!session) {
+  return Astro.redirect('/login');
+}
+---
+
+<BaseLayout title="Behaviour Response Instructions | Lakshya Counselling">
+  <Header client:load session={session} />
+  
+  <main class="min-h-screen py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto bg-white rounded-lg shadow p-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-6">
+          Test Assessment<br />
+          <span class="text-blue-600">Behaviour Response</span>
+        </h1>
+        
+        <div class="prose max-w-none">
+          <h2 class="text-2xl font-semibold text-gray-900 mt-6 mb-4">Instructions</h2>
+          <p class="text-gray-700 mb-4">
+            This schedule has <strong>50</strong> pairs of statements. Each pair contains two different behaviour patterns. 
+            You need to read both statements/words and select the one that fits you the best. It is a must to select any one of the two statements. 
+            No question should be left unanswered.
+          </p>
+          <p class="text-gray-700 mb-4">
+            Ideally this schedule is completed within 10 minutes. Please try to complete it within the time limit.
+          </p>
+
+          <div class="mt-8 flex gap-4">
+            <a 
+              href="/behaviour-response" 
+              class="px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium"
+            >
+              Start Assessment
+            </a>
+            <a 
+              href="/tests" 
+              class="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors font-medium"
+            >
+              Back to Tests
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <Footer client:load />
+</BaseLayout>
+

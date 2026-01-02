@@ -1,0 +1,174 @@
+/**
+ * Webflow Client-First Style Guide
+ * Extracted from: https://lakshayas-business-websit-29830f6cf62e0.webflow.io/style-guide
+ * 
+ * This file contains utility classes that match the Webflow style guide
+ */
+
+/* Heading Classes */
+.heading-xxlarge {
+  @apply text-6xl md:text-7xl font-bold leading-tight;
+}
+
+.heading-xlarge {
+  @apply text-5xl md:text-6xl font-bold leading-tight;
+}
+
+.heading-large {
+  @apply text-4xl md:text-5xl font-semibold leading-tight;
+}
+
+.heading-medium {
+  @apply text-2xl md:text-3xl font-semibold leading-snug;
+}
+
+.heading-small {
+  @apply text-xl md:text-2xl font-semibold leading-snug;
+}
+
+.heading-xsmall {
+  @apply text-lg md:text-xl font-semibold leading-snug;
+}
+
+/* Text Size Classes */
+.text-size-large {
+  @apply text-lg md:text-xl leading-relaxed;
+}
+
+.text-size-medium {
+  @apply text-base md:text-lg leading-relaxed;
+}
+
+.text-size-regular {
+  @apply text-base leading-relaxed;
+}
+
+.text-size-small {
+  @apply text-sm leading-relaxed;
+}
+
+.text-size-tiny {
+  @apply text-xs leading-relaxed;
+}
+
+/* Text Style Classes */
+.text-style-strikethrough {
+  @apply line-through;
+}
+
+.text-style-italic {
+  @apply italic;
+}
+
+.text-style-muted {
+  @apply text-gray-500 opacity-70;
+}
+
+.text-style-allcaps {
+  @apply uppercase tracking-wider;
+}
+
+.text-style-nowrap {
+  @apply whitespace-nowrap;
+}
+
+.text-style-link {
+  @apply text-primary-600 hover:text-primary-700 underline;
+}
+
+.text-style-quote {
+  @apply border-l-4 border-primary-500 pl-4 italic text-gray-700;
+}
+
+.text-style-2lines {
+  @apply line-clamp-2;
+}
+
+.text-style-3lines {
+  @apply line-clamp-3;
+}
+
+/* Text Weight Classes */
+.text-weight-xbold {
+  @apply font-black;
+}
+
+.text-weight-bold {
+  @apply font-bold;
+}
+
+.text-weight-semibold {
+  @apply font-semibold;
+}
+
+.text-weight-medium {
+  @apply font-medium;
+}
+
+.text-weight-normal {
+  @apply font-normal;
+}
+
+.text-weight-light {
+  @apply font-light;
+}
+
+/* Text Alignment Classes */
+.text-align-left {
+  @apply text-left;
+}
+
+.text-align-center {
+  @apply text-center;
+}
+
+.text-align-right {
+  @apply text-right;
+}
+
+/* Text Color Classes */
+.text-color-grey {
+  @apply text-gray-500;
+}
+
+.text-color-black {
+  @apply text-black;
+}
+
+/* Button Classes */
+.button {
+  @apply inline-block px-8 py-4 bg-primary-500 text-white rounded-4xl hover:bg-primary-600 transition-colors font-medium text-lg;
+}
+
+.button-secondary {
+  @apply inline-block px-8 py-4 bg-white border-2 border-primary-500 text-primary-500 rounded-4xl hover:bg-primary-50 transition-colors font-medium text-lg;
+}
+
+.button-text {
+  @apply inline-block px-4 py-2 text-primary-600 hover:text-primary-700 underline font-medium;
+}
+
+.button.on-blue {
+  @apply bg-white text-primary-600 hover:bg-primary-50;
+}
+
+/* Alignment Utilities */
+.align-center {
+  @apply text-center;
+}
+
+.mobile-center {
+  @apply text-center md:text-left;
+}
+
+/* Additional Utility Classes */
+.bold {
+  @apply font-bold;
+}
+
+.no-wrap {
+  @apply whitespace-nowrap;
+}
+
+
+

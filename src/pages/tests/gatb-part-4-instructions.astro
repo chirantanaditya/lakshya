@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { getSession } from '../../lib/session';
+
+const session = await getSession(Astro.cookies);
+
+if (!session) {
+  return Astro.redirect('/login');
+}
+---
+
+<BaseLayout title="GATB Part 4 - Instructions | Lakshya Counselling">
+  <Header client:load session={session} />
+  
+  <main class="min-h-screen py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto bg-white rounded-lg shadow p-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-6">
+          Test Assessment<br />
+          <span class="text-blue-600">GATB Part IV</span>
+        </h1>
+        
+        <div class="prose max-w-none">
+          <h2 class="text-2xl font-semibold text-gray-900 mt-6 mb-4">Instructions</h2>
+          <p class="text-gray-700 mb-4">
+            Here are some exercises in finding the two words which are most nearly the <strong>SAME</strong> in meaning or <strong>OPPOSITE</strong> in meaning.
+          </p>
+
+          <h3 class="text-xl font-semibold text-gray-900 mt-6 mb-4">Let's Check out some sample questions</h3>
+          
+          <div class="mb-6">
+            <h4 class="text-lg font-semibold text-gray-900 mb-3">1.</h4>
+            <div class="flex gap-4 mb-4">
+              <button class="px-4 py-2 bg-gray-100 rounded">a. big</button>
+              <button class="px-4 py-2 bg-gray-100 rounded">b. large</button>
+              <button class="px-4 py-2 bg-gray-100 rounded">c. dry</button>
+              <button class="px-4 py-2 bg-gray-100 rounded">d. slow</button>
+            </div>
+            <p class="text-blue-600 font-semibold mb-2">Correct. The right words are Big and Large. They are synonyms.</p>
+            <p class="text-red-600 mb-4">Incorrect. The right words are Big and Large. They are synonyms.</p>
+          </div>
+
+          <div class="mb-6">
+            <h4 class="text-lg font-semibold text-gray-900 mb-3">2.</h4>
+            <div class="flex gap-4 mb-4">
+              <button class="px-4 py-2 bg-gray-100 rounded">a. dreary</button>
+              <button class="px-4 py-2 bg-gray-100 rounded">b. loyal</button>
+              <button class="px-4 py-2 bg-gray-100 rounded">c. ancient</button>
+              <button class="px-4 py-2 bg-gray-100 rounded">d. disloyal</button>
+            </div>
+            <p class="text-blue-600 font-semibold mb-2">Correct. The right words are Loyal and Disloyal. They are antonyms.</p>
+            <p class="text-red-600 mb-4">Incorrect. The right words are Loyal and Disloyal. They are antonyms.</p>
+          </div>
+
+          <h3 class="text-xl font-semibold text-gray-900 mt-6 mb-4">Please keep the following point before starting</h3>
+          <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+            <li>You will only get <span class="text-red-600 font-semibold">06:00</span> to finish the test.</li>
+            <li>Please do not click on the refresh button or press back button on the browser while appearing for the test.</li>
+          </ul>
+
+          <div class="mt-8 flex gap-4">
+            <a 
+              href="/tests/gatb-part-4" 
+              class="px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium"
+            >
+              Start Test
+            </a>
+            <a 
+              href="/tests" 
+              class="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors font-medium"
+            >
+              Back to Tests
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <Footer client:load />
+</BaseLayout>
+

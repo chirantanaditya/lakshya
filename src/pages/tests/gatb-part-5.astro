@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import GATBPart5Test from '../../components/GATBPart5Test';
+import { getSession } from '../../lib/session';
+import { getUserById } from '../../lib/auth';
+
+const session = await getSession(Astro.cookies);
+
+if (!session) {
+  return Astro.redirect('/login');
+}
+
+const user = await getUserById(session.userId);
+
+if (!user?.enableGeneralAptitude) {
+  return Astro.redirect('/tests');
+}
+
+if (user.gatbPart5Status === 'Completed') {
+  return Astro.redirect('/dashboard');
+}
+
+// Fetch questions from API
+let formattedQuestions: any[] = [];
+try {
+  const baseUrl = Astro.url.origin;
+  const response = await fetch(`${baseUrl}/api/tests/gatb-part-5-questions`);
+  
+  if (response.ok) {
+    const data = await response.json();
+    formattedQuestions = data.questions || [];
+  } else {
+    console.error('Failed to fetch questions:', response.statusText);
+  }
+} catch (error) {
+  console.error('Error fetching questions:', error);
+}
+---
+
+<BaseLayout title="GATB Part 5 | Lakshya Counselling">
+  <Header client:load session={session} />
+  
+  <main class="min-h-screen py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <GATBPart5Test
+        client:load
+        questions={formattedQuestions}
+      />
+    </div>
+  </main>
+  
+  <Footer client:load />
+
+  <script define:vars={{ baseUrl: Astro.url.origin }}>
+    window.gatbPart5SubmitHandler = async (responses) => {
+      const response = await fetch(`${baseUrl}/api/tests/submit`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          testType: 'gatb-part-5',
+          responses,
+        }),
+      });
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error || 'Failed to submit test');
+      }
+
+      const result = await response.json();
+      
+      // Console log for score display
+      if (result.score) {
+        console.log('═══════════════════════════════════════');
+        console.log('📊 GATB Part 5 - Test Results');
+        console.log('═══════════════════════════════════════');
+        console.log(`✅ Correct Answers: ${result.score.correctAnswers}`);
+        console.log(`❌ Incorrect Answers: ${result.score.incorrectAnswers}`);
+        console.log(`📈 Total Questions: ${result.score.totalQuestions}`);
+        console.log(`🎯 Score: ${result.score.score}/${result.score.totalQuestions}`);
+        console.log(`📊 Percentage: ${result.score.percentage}%`);
+        console.log('═══════════════════════════════════════');
+      }
+
+      window.location.href = '/tests/gatb-part-6-instructions';
+    };
+  </script>
+</BaseLayout>
+

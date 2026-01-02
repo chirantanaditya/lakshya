@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { getSession } from '../../lib/session';
+
+const session = await getSession(Astro.cookies);
+
+if (!session) {
+  return Astro.redirect('/login');
+}
+---
+
+<BaseLayout title="GATB Part 6 - Instructions | Lakshya Counselling">
+  <Header client:load session={session} />
+  
+  <main class="min-h-screen py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto bg-white rounded-lg shadow p-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-6">
+          Test Assessment<br />
+          <span class="text-blue-600">GATB Part VI</span>
+        </h1>
+        
+        <div class="prose max-w-none">
+          <h2 class="text-2xl font-semibold text-gray-900 mt-6 mb-4">Instructions</h2>
+          <p class="text-gray-700 mb-4">
+            In this test, you have to solve some arithmetic problem statements.
+          </p>
+
+          <h3 class="text-xl font-semibold text-gray-900 mt-6 mb-4">Let's Check out some sample questions</h3>
+          
+          <div class="mb-6">
+            <h4 class="text-lg font-semibold text-gray-900 mb-3">1. It takes half an hour to do one piece of work. How many pieces of work can be finished in 8 hours?</h4>
+            <div class="flex gap-4 mb-4 flex-wrap">
+              <button class="px-4 py-2 bg-gray-100 rounded">8 pieces</button>
+              <button class="px-4 py-2 bg-gray-100 rounded">10 pieces</button>
+              <button class="px-4 py-2 bg-gray-100 rounded">16 pieces</button>
+              <button class="px-4 py-2 bg-gray-100 rounded">24 pieces</button>
+              <button class="px-4 py-2 bg-gray-100 rounded">None of the above</button>
+            </div>
+            <p class="text-blue-600 font-semibold mb-2">Correct. 16 pieces is the right answer. Well done.</p>
+            <p class="text-red-600 mb-4">Incorrect. The right answer is 16 pieces. If 1 piece of work gets completed in 1/2 an hour. Then in 2 pieces of work gets finished in an hour. Therefore, in 8 hours it will be, 2 X 8 = 16.</p>
+          </div>
+
+          <h3 class="text-xl font-semibold text-gray-900 mt-6 mb-4">Please keep the following point before starting</h3>
+          <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+            <li>You will only get <span class="text-red-600 font-semibold">07:00</span> to finish the test.</li>
+            <li>Please do not click on the refresh button or press back button on the browser while appearing for the test.</li>
+          </ul>
+
+          <div class="mt-8 flex gap-4">
+            <a 
+              href="/tests/gatb-part-6" 
+              class="px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium"
+            >
+              Start Test
+            </a>
+            <a 
+              href="/tests" 
+              class="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors font-medium"
+            >
+              Back to Tests
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <Footer client:load />
+</BaseLayout>
+

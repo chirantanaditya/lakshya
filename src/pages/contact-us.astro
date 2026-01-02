@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import ContactForm from '../components/ContactForm';
+import { getSession } from '../lib/session';
+
+const session = await getSession(Astro.cookies);
+---
+
+<BaseLayout 
+  title="Contact Us | Lakshya Counselling"
+  description="Get in touch with Lakshya Counselling for career guidance and counselling services."
+>
+  <Header client:load session={session} />
+  
+  <main class="min-h-screen py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+          <p class="text-xl text-gray-600">
+            Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-lg shadow p-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-6">Get in Touch</h2>
+            
+            <div class="space-y-6">
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Book a Consultation</h3>
+                <a 
+                  href="https://tidycal.com/suresh1/about-lakshya-counselling" 
+                  class="text-primary-600 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Schedule a free consultation →
+                </a>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Email</h3>
+                <a href="mailto:info@lakshyacounselling.com" class="text-gray-600 hover:text-primary-600">
+                  info@lakshyacounselling.com
+                </a>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2">Office Hours</h3>
+                <p class="text-gray-600">
+                  Monday - Friday: 9:00 AM - 6:00 PM<br />
+                  Saturday: 10:00 AM - 4:00 PM<br />
+                  Sunday: Closed
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow p-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h2>
+            <ContactForm client:load />
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <Footer client:load />
+</BaseLayout>
+
+

@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { getSession } from '../lib/session';
+import { getUserById } from '../lib/auth';
+
+const session = await getSession(Astro.cookies);
+
+if (!session) {
+  return Astro.redirect('/login');
+}
+
+const user = await getUserById(session.userId);
+---
+
+<BaseLayout title="Dashboard | Lakshya Counselling">
+  <Header client:load session={session} />
+  
+  <main class="min-h-screen py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <h1 class="text-3xl font-bold text-gray-900 mb-8">Welcome, {user?.name || 'User'}!</h1>
+        
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <!-- Profile Card -->
+          <div class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Profile Information</h2>
+            <div class="space-y-2 text-gray-600">
+              <p><span class="font-medium">Email:</span> {user?.email}</p>
+              {user?.phoneNo && <p><span class="font-medium">Phone:</span> {user.phoneNo}</p>}
+              {user?.education && <p><span class="font-medium">Education:</span> {user.education}</p>}
+            </div>
+            <a href="/user-account" class="mt-4 inline-block text-primary-600 hover:underline">
+              Edit Profile →
+            </a>
+          </div>
+          
+          <!-- Test Status Card -->
+          <div class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Test Status</h2>
+            <div class="space-y-3">
+              {user?.generalAptitudeStatus && (
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-700">GATB Part 1</span>
+                  <span class={`px-3 py-1 rounded-full text-sm ${
+                    user.generalAptitudeStatus === 'Completed' 
+                      ? 'bg-green-100 text-green-800' 
+                      : 'bg-yellow-100 text-yellow-800'
+                  }`}>
+                    {user.generalAptitudeStatus}
+                  </span>
+                </div>
+              )}
+              {user?.workValuesStatus && (
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-700">Work Values</span>
+                  <span class={`px-3 py-1 rounded-full text-sm ${
+                    user.workValuesStatus === 'Completed' 
+                      ? 'bg-green-100 text-green-800' 
+                      : 'bg-yellow-100 text-yellow-800'
+                  }`}>
+                    {user.workValuesStatus}
+                  </span>
+                </div>
+              )}
+            </div>
+            <a href="/tests" class="mt-4 inline-block text-primary-600 hover:underline">
+              View All Tests →
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Actions -->
+        <div class="bg-white rounded-lg shadow p-6">
+          <h2 class="text-xl font-semibold text-gray-900 mb-4">Quick Actions</h2>
+          <div class="grid md:grid-cols-3 gap-4">
+            <a href="/tests" class="p-4 border-2 border-primary-200 rounded-lg hover:border-primary-400 transition-colors text-center">
+              <div class="text-2xl mb-2">📝</div>
+              <div class="font-medium text-gray-900">Take Tests</div>
+            </a>
+            <a href="/user-account" class="p-4 border-2 border-primary-200 rounded-lg hover:border-primary-400 transition-colors text-center">
+              <div class="text-2xl mb-2">👤</div>
+              <div class="font-medium text-gray-900">My Profile</div>
+            </a>
+            <a href="https://tidycal.com/suresh1/about-lakshya-counselling" class="p-4 border-2 border-primary-200 rounded-lg hover:border-primary-400 transition-colors text-center">
+              <div class="text-2xl mb-2">💬</div>
+              <div class="font-medium text-gray-900">Book Consultation</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <Footer client:load />
+</BaseLayout>
+

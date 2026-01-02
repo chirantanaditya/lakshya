@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import WorkValuesTest from '../../components/WorkValuesTest';
+import { getSession } from '../../lib/session';
+import { getUserById } from '../../lib/auth';
+
+const session = await getSession(Astro.cookies);
+
+if (!session) {
+  return Astro.redirect('/login');
+}
+
+let user;
+try {
+  user = await getUserById(session.userId);
+} catch (error: any) {
+  console.error('Database connection error:', error);
+  // If database connection fails, show error page
+  return Astro.redirect('/dashboard?error=database_connection');
+}
+
+if (!user) {
+  return Astro.redirect('/login');
+}
+
+if (!user?.enableWorkValues) {
+  return Astro.redirect('/tests');
+}
+
+if (user.workValuesStatus === 'Completed') {
+  return Astro.redirect('/dashboard');
+}
+
+// Fetch questions from API
+let formattedQuestions: any[] = [];
+try {
+  const baseUrl = Astro.url.origin;
+  const response = await fetch(`${baseUrl}/api/tests/work-values-questions`);
+  
+  if (response.ok) {
+    const data = await response.json();
+    formattedQuestions = data.questions || [];
+  } else {
+    console.error('Failed to fetch questions:', response.statusText);
+  }
+} catch (error) {
+  console.error('Error fetching questions:', error);
+}
+---
+
+<BaseLayout title="Work Values Assessment | Lakshya Counselling">
+  <Header client:load session={session} />
+  
+  <main class="min-h-screen py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <WorkValuesTest
+        client:load
+        questions={formattedQuestions}
+      />
+    </div>
+  </main>
+  
+  <Footer client:load />
+
+  <script define:vars={{ baseUrl: Astro.url.origin }}>
+    window.workValuesSubmitHandler = async function(responses) {
+      const response = await fetch(`${baseUrl}/api/tests/submit`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          testType: 'work-values',
+          responses,
+        }),
+      });
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error || 'Failed to submit test');
+      }
+
+      const result = await response.json();
+      
+      // Console log for score display
+      if (result.score && result.score.attributes) {
+        console.log('═══════════════════════════════════════');
+        console.log('📊 Work Values Assessment - Results');
+        console.log('═══════════════════════════════════════');
+        console.log('Attribute Scores:');
+        Object.entries(result.score.attributes).forEach(([attr, score]) => {
+          console.log(`  ${attr}: ${score}`);
+        });
+        console.log(`📈 Total Questions: ${result.score.totalQuestions}`);
+        console.log(`✅ Answered Questions: ${result.score.answeredQuestions}`);
+        console.log('═══════════════════════════════════════');
+      }
+
+      window.location.href = '/dashboard';
+    };
+  </script>
+</BaseLayout>
+
+

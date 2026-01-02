@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { getSession } from '../lib/session';
+
+const session = await getSession(Astro.cookies);
+---
+
+<BaseLayout 
+  title="High School Students | Lakshya Counselling"
+  description="Career counselling for high school students in 9th and 10th standard."
+>
+  <Header client:load session={session} />
+  
+  <main class="min-h-screen py-12">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold text-gray-900 mb-6">For High School Students</h1>
+        
+        <div class="prose max-w-none">
+          <p class="text-xl text-gray-700 mb-8">
+            Students in their 9th and 10th standard, contemplating selecting the appropriate institution 
+            for their high school education.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">How We Help</h2>
+          
+          <div class="space-y-6 my-8">
+            <div class="bg-white rounded-lg shadow p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Understanding Your Interests</h3>
+              <p class="text-gray-600">
+                Through comprehensive assessments, we help you discover your interests, strengths, and learning style.
+              </p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">School Selection Guidance</h3>
+              <p class="text-gray-600">
+                Get personalized recommendations for schools and institutions that align with your academic goals.
+              </p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Future Planning</h3>
+              <p class="text-gray-600">
+                Start planning your academic journey early with insights into potential career paths.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 bg-primary-50 rounded-lg p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Get Started</h3>
+            <p class="text-gray-700 mb-4">
+              Register for a free consultation and begin your career journey with us.
+            </p>
+            <div class="flex gap-4">
+              <a 
+                href="/register" 
+                class="px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium"
+              >
+                Register Now
+              </a>
+              <a 
+                href="https://tidycal.com/suresh1/about-lakshya-counselling" 
+                class="px-6 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg hover:bg-primary-50 transition-colors font-medium"
+              >
+                Book Consultation
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <Footer client:load />
+</BaseLayout>
+
+

@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import GATBPart7Test from '../../components/GATBPart7Test';
+import { getSession } from '../../lib/session';
+import { getUserById } from '../../lib/auth';
+
+const session = await getSession(Astro.cookies);
+
+if (!session) {
+  return Astro.redirect('/login');
+}
+
+const user = await getUserById(session.userId);
+
+if (!user?.enableGeneralAptitude) {
+  return Astro.redirect('/tests');
+}
+
+if (user.gatbPart7Status === 'Completed') {
+  return Astro.redirect('/dashboard');
+}
+
+// Get part number from query parameter (default to 1)
+const partParam = Astro.url.searchParams.get('part');
+const currentPart = partParam ? parseInt(partParam) : 1;
+
+// Fetch questions from API for the current part
+let formattedQuestions: any[] = [];
+let partInfo = { part: 1, totalParts: 3 };
+try {
+  const baseUrl = Astro.url.origin;
+  const response = await fetch(`${baseUrl}/api/tests/gatb-part-7-questions?part=${currentPart}`);
+  
+  if (response.ok) {
+    const data = await response.json();
+    formattedQuestions = data.questions || [];
+    partInfo = { part: data.part || currentPart, totalParts: data.totalParts || 3 };
+  } else {
+    console.error('Failed to fetch questions:', response.statusText);
+  }
+} catch (error) {
+  console.error('Error fetching questions:', error);
+}
+---
+
+<BaseLayout title="GATB Part 7 | Lakshya Counselling">
+  <Header client:load session={session} />
+  
+  <main class="min-h-screen py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <GATBPart7Test
+        client:load
+        questions={formattedQuestions}
+        part={partInfo.part}
+        totalParts={partInfo.totalParts}
+      />
+    </div>
+  </main>
+  
+  <Footer client:load />
+
+  <script define:vars={{ baseUrl: Astro.url.origin, currentPart: partInfo.part, totalParts: partInfo.totalParts }}>
+    window.gatbPart7SubmitHandler = async (matches, part) => {
+      const response = await fetch(`${baseUrl}/api/tests/submit`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          testType: 'gatb-part-7',
+          part: part,
+          matches: matches,
+        }),
+      });
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error || 'Failed to submit test');
+      }
+
+      const result = await response.json();
+      
+      // Console log for score display
+      if (result.score) {
+        console.log('═══════════════════════════════════════');
+        console.log(`📊 GATB Part 7 - Part ${part} Results`);
+        console.log('═══════════════════════════════════════');
+        console.log(`✅ Matched: ${result.score.matched}`);
+        console.log(`📈 Total Questions: ${result.score.totalQuestions}`);
+        console.log(`🎯 Score: ${result.score.matched}/${result.score.totalQuestions}`);
+        console.log('═══════════════════════════════════════');
+      }
+
+      // If this is the last part, redirect to dashboard
+      // Otherwise, move to next part
+      if (part >= totalParts) {
+        window.location.href = '/dashboard';
+      } else {
+        window.location.href = `/tests/gatb-part-7?part=${part + 1}`;
+      }
+    };
+  </script>
+</BaseLayout>
+

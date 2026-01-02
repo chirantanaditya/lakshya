@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { getSession } from '../../lib/session';
+import { db } from '../../db';
+import { blogPosts } from '../../db/schema';
+import { desc } from 'drizzle-orm';
+
+const session = await getSession(Astro.cookies);
+
+const posts = await db
+  .select()
+  .from(blogPosts)
+  .orderBy(desc(blogPosts.createdAt))
+  .limit(20);
+---
+
+<BaseLayout 
+  title="Blog | Lakshya Counselling"
+  description="Read our latest articles on career guidance, counselling, and personal development."
+>
+  <Header client:load session={session} />
+  
+  <main class="min-h-screen py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <h1 class="text-4xl font-bold text-gray-900 mb-8">Blog</h1>
+        
+        {posts.length === 0 ? (
+          <div class="bg-white rounded-lg shadow p-12 text-center">
+            <p class="text-gray-600">No blog posts available yet. Check back soon!</p>
+          </div>
+        ) : (
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {posts.map((post) => (
+              <a 
+                href={`/blog/${post.slug}`}
+                class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow overflow-hidden"
+              >
+                {post.thumbnailImage && (
+                  <img 
+                    src={post.thumbnailImage} 
+                    alt={post.altTextForSeo || post.name}
+                    class="w-full h-48 object-cover"
+                  />
+                )}
+                <div class="p-6">
+                  <h2 class="text-xl font-semibold text-gray-900 mb-2">{post.name}</h2>
+                  {post.postSummary && (
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">{post.postSummary}</p>
+                  )}
+                  <span class="text-primary-600 text-sm font-medium">Read more →</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  </main>
+  
+  <Footer client:load />
+</BaseLayout>
+
+

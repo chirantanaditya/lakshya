@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { getSession } from '../../lib/session';
+
+const session = await getSession(Astro.cookies);
+
+if (!session) {
+  return Astro.redirect('/login');
+}
+---
+
+<BaseLayout title="GATB Part 7 - Instructions | Lakshya Counselling">
+  <Header client:load session={session} />
+  
+  <main class="min-h-screen py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto bg-white rounded-lg shadow p-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-6">
+          Test Assessment<br />
+          <span class="text-blue-600">GATB Part VII</span>
+        </h1>
+        
+        <div class="prose max-w-none">
+          <h2 class="text-2xl font-semibold text-gray-900 mt-6 mb-4">Instructions</h2>
+          <p class="text-gray-700 mb-4">
+            In this part of the test, you have to compare figures and choose the right option.<br />
+            1. Map figures from the box on the left with the right figures on the box on the left.<br />
+            2. Please do all parts i.e., <strong>Page 1, Page 2</strong> and <strong>Page 3</strong>.
+          </p>
+
+          <h3 class="text-xl font-semibold text-gray-900 mt-6 mb-4">Let's Check out some sample questions</h3>
+          <p class="text-gray-700 mb-6">
+            You will need to match shapes from both sides. Make sure to complete all pages.
+          </p>
+
+          <h3 class="text-xl font-semibold text-gray-900 mt-6 mb-4">Please keep the following point before starting</h3>
+          <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+            <li>You will only get <span class="text-red-600 font-semibold">07:00</span> to finish the test.</li>
+            <li>Please do not click on the refresh button or back button of the browser while appearing for the test.</li>
+          </ul>
+
+          <div class="mt-8 flex gap-4">
+            <a 
+              href="/tests/gatb-part-7" 
+              class="px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium"
+            >
+              Start Test
+            </a>
+            <a 
+              href="/tests" 
+              class="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors font-medium"
+            >
+              Back to Tests
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <Footer client:load />
+</BaseLayout>
+

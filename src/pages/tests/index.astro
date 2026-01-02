@@ -1,0 +1,364 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { getSession } from '../../lib/session';
+import { getUserById } from '../../lib/auth';
+
+const session = await getSession(Astro.cookies);
+
+if (!session) {
+  return Astro.redirect('/login');
+}
+
+const user = await getUserById(session.userId);
+---
+
+<BaseLayout title="Tests | Lakshya Counselling">
+  <Header client:load session={session} />
+  
+  <main class="min-h-screen py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <h1 class="text-3xl font-bold text-gray-900 mb-8">Available Tests</h1>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- GATB Part 1 -->
+          {user?.enableGeneralAptitude && (
+            <div class="bg-white rounded-lg shadow p-6">
+              <h2 class="text-xl font-semibold text-gray-900 mb-2">GATB Part 1</h2>
+              <p class="text-gray-600 mb-4 text-sm">General Aptitude Test Battery - Part 1</p>
+              <div class="flex justify-between items-center mb-4">
+                <span class={`px-3 py-1 rounded-full text-sm ${
+                  user.generalAptitudeStatus === 'Completed' 
+                    ? 'bg-green-100 text-green-800' 
+                    : 'bg-yellow-100 text-yellow-800'
+                }`}>
+                  {user.generalAptitudeStatus || 'Pending'}
+                </span>
+              </div>
+              <div class="flex gap-2">
+                <a href="/tests/gatb-part-1-instructions" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium">
+                  Instructions
+                </a>
+                {user.generalAptitudeStatus !== 'Completed' && (
+                  <a href="/tests/gatb-part-1" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium">
+                    Start Test
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+
+          <!-- GATB Part 2 -->
+          {user?.enableGeneralAptitude && (
+            <div class="bg-white rounded-lg shadow p-6">
+              <h2 class="text-xl font-semibold text-gray-900 mb-2">GATB Part 2</h2>
+              <p class="text-gray-600 mb-4 text-sm">General Aptitude Test Battery - Part 2</p>
+              <div class="flex justify-between items-center mb-4">
+                <span class={`px-3 py-1 rounded-full text-sm ${
+                  user.gatbPart2Status === 'Completed' 
+                    ? 'bg-green-100 text-green-800' 
+                    : 'bg-yellow-100 text-yellow-800'
+                }`}>
+                  {user.gatbPart2Status || 'Pending'}
+                </span>
+              </div>
+              <div class="flex gap-2">
+                <a href="/tests/gatb-part-2-instructions" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium">
+                  Instructions
+                </a>
+                {user.gatbPart2Status !== 'Completed' && (
+                  <a href="/tests/gatb-part-2" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium">
+                    Start Test
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+
+          <!-- GATB Part 3 -->
+          {user?.enableGeneralAptitude && (
+            <div class="bg-white rounded-lg shadow p-6">
+              <h2 class="text-xl font-semibold text-gray-900 mb-2">GATB Part 3</h2>
+              <p class="text-gray-600 mb-4 text-sm">General Aptitude Test Battery - Part 3</p>
+              <div class="flex justify-between items-center mb-4">
+                <span class={`px-3 py-1 rounded-full text-sm ${
+                  user.gatbPart3Status === 'Completed' 
+                    ? 'bg-green-100 text-green-800' 
+                    : 'bg-yellow-100 text-yellow-800'
+                }`}>
+                  {user.gatbPart3Status || 'Pending'}
+                </span>
+              </div>
+              <div class="flex gap-2">
+                <a href="/tests/gatb-part-3-instructions" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium">
+                  Instructions
+                </a>
+                {user.gatbPart3Status !== 'Completed' && (
+                  <a href="/tests/gatb-part-3" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium">
+                    Start Test
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+
+          <!-- GATB Part 4 -->
+          {user?.enableGeneralAptitude && (
+            <div class="bg-white rounded-lg shadow p-6">
+              <h2 class="text-xl font-semibold text-gray-900 mb-2">GATB Part 4</h2>
+              <p class="text-gray-600 mb-4 text-sm">General Aptitude Test Battery - Part 4</p>
+              <div class="flex justify-between items-center mb-4">
+                <span class={`px-3 py-1 rounded-full text-sm ${
+                  user.gatbPart4Status === 'Completed' 
+                    ? 'bg-green-100 text-green-800' 
+                    : 'bg-yellow-100 text-yellow-800'
+                }`}>
+                  {user.gatbPart4Status || 'Pending'}
+                </span>
+              </div>
+              <div class="flex gap-2">
+                <a href="/tests/gatb-part-4-instructions" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium">
+                  Instructions
+                </a>
+                {user.gatbPart4Status !== 'Completed' && (
+                  <a href="/tests/gatb-part-4" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium">
+                    Start Test
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+
+          <!-- GATB Part 5 -->
+          {user?.enableGeneralAptitude && (
+            <div class="bg-white rounded-lg shadow p-6">
+              <h2 class="text-xl font-semibold text-gray-900 mb-2">GATB Part 5</h2>
+              <p class="text-gray-600 mb-4 text-sm">General Aptitude Test Battery - Part 5</p>
+              <div class="flex justify-between items-center mb-4">
+                <span class={`px-3 py-1 rounded-full text-sm ${
+                  user.gatbPart5Status === 'Completed' 
+                    ? 'bg-green-100 text-green-800' 
+                    : 'bg-yellow-100 text-yellow-800'
+                }`}>
+                  {user.gatbPart5Status || 'Pending'}
+                </span>
+              </div>
+              <div class="flex gap-2">
+                <a href="/tests/gatb-part-5-instructions" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium">
+                  Instructions
+                </a>
+                {user.gatbPart5Status !== 'Completed' && (
+                  <a href="/tests/gatb-part-5" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium">
+                    Start Test
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+
+          <!-- GATB Part 6 -->
+          {user?.enableGeneralAptitude && (
+            <div class="bg-white rounded-lg shadow p-6">
+              <h2 class="text-xl font-semibold text-gray-900 mb-2">GATB Part 6</h2>
+              <p class="text-gray-600 mb-4 text-sm">General Aptitude Test Battery - Part 6</p>
+              <div class="flex justify-between items-center mb-4">
+                <span class={`px-3 py-1 rounded-full text-sm ${
+                  user.gatbPart6Status === 'Completed' 
+                    ? 'bg-green-100 text-green-800' 
+                    : 'bg-yellow-100 text-yellow-800'
+                }`}>
+                  {user.gatbPart6Status || 'Pending'}
+                </span>
+              </div>
+              <div class="flex gap-2">
+                <a href="/tests/gatb-part-6-instructions" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium">
+                  Instructions
+                </a>
+                {user.gatbPart6Status !== 'Completed' && (
+                  <a href="/tests/gatb-part-6" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium">
+                    Start Test
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+
+          <!-- GATB Part 7 -->
+          {user?.enableGeneralAptitude && (
+            <div class="bg-white rounded-lg shadow p-6">
+              <h2 class="text-xl font-semibold text-gray-900 mb-2">GATB Part 7</h2>
+              <p class="text-gray-600 mb-4 text-sm">General Aptitude Test Battery - Part 7</p>
+              <div class="flex justify-between items-center mb-4">
+                <span class={`px-3 py-1 rounded-full text-sm ${
+                  user.gatbPart7Status === 'Completed' 
+                    ? 'bg-green-100 text-green-800' 
+                    : 'bg-yellow-100 text-yellow-800'
+                }`}>
+                  {user.gatbPart7Status || 'Pending'}
+                </span>
+              </div>
+              <div class="flex gap-2">
+                <a href="/tests/gatb-part-7-instructions" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium">
+                  Instructions
+                </a>
+                {user.gatbPart7Status !== 'Completed' && (
+                  <a href="/tests/gatb-part-7" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium">
+                    Start Test
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+
+          <!-- Work Values -->
+          {user?.enableWorkValues && (
+            <div class="bg-white rounded-lg shadow p-6">
+              <h2 class="text-xl font-semibold text-gray-900 mb-2">Work Values Assessment</h2>
+              <p class="text-gray-600 mb-4 text-sm">Assess your work values and preferences</p>
+              <div class="flex justify-between items-center mb-4">
+                <span class={`px-3 py-1 rounded-full text-sm ${
+                  user.workValuesStatus === 'Completed' 
+                    ? 'bg-green-100 text-green-800' 
+                    : 'bg-yellow-100 text-yellow-800'
+                }`}>
+                  {user.workValuesStatus || 'Pending'}
+                </span>
+              </div>
+              <div class="flex gap-2">
+                <a href="/work-values-instructions" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium">
+                  Instructions
+                </a>
+                {user.workValuesStatus !== 'Completed' && (
+                  <a href="/tests/work-values-assessment" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium">
+                    Start Test
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+
+          <!-- FIRO-B -->
+          {user?.enableFiroB && (
+            <div class="bg-white rounded-lg shadow p-6">
+              <h2 class="text-xl font-semibold text-gray-900 mb-2">FIRO-B</h2>
+              <p class="text-gray-600 mb-4 text-sm">Fundamental Interpersonal Relations Orientation</p>
+              <div class="flex justify-between items-center mb-4">
+                <span class={`px-3 py-1 rounded-full text-sm ${
+                  user.firoBStatus === 'Completed' 
+                    ? 'bg-green-100 text-green-800' 
+                    : 'bg-yellow-100 text-yellow-800'
+                }`}>
+                  {user.firoBStatus || 'Pending'}
+                </span>
+              </div>
+              <div class="flex gap-2">
+                <a href="/firo-b-instructions" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium">
+                  Instructions
+                </a>
+                {user.firoBStatus !== 'Completed' && (
+                  <a href="/tests/firo-b" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium">
+                    Start Test
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+
+          <!-- Interest Inventory -->
+          {user?.enableInterestInventory && (
+            <div class="bg-white rounded-lg shadow p-6">
+              <h2 class="text-xl font-semibold text-gray-900 mb-2">Interest Inventory</h2>
+              <p class="text-gray-600 mb-4 text-sm">Discover your interests and preferences</p>
+              <div class="flex justify-between items-center mb-4">
+                <span class={`px-3 py-1 rounded-full text-sm ${
+                  user.interestInventoryStatus === 'Completed' 
+                    ? 'bg-green-100 text-green-800' 
+                    : 'bg-yellow-100 text-yellow-800'
+                }`}>
+                  {user.interestInventoryStatus || 'Pending'}
+                </span>
+              </div>
+              <div class="flex gap-2">
+                <a href="/interest-inventory-instructions" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium">
+                  Instructions
+                </a>
+                {user.interestInventoryStatus !== 'Completed' && (
+                  <a href="/tests/interest-inventory" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium">
+                    Start Test
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+
+          <!-- Personality Aspect -->
+          {user?.enablePersonalityAspect && (
+            <div class="bg-white rounded-lg shadow p-6">
+              <h2 class="text-xl font-semibold text-gray-900 mb-2">Personality Aspect</h2>
+              <p class="text-gray-600 mb-4 text-sm">Understand your personality traits</p>
+              <div class="flex justify-between items-center mb-4">
+                <span class={`px-3 py-1 rounded-full text-sm ${
+                  user.personalityAspectStatus === 'Completed' 
+                    ? 'bg-green-100 text-green-800' 
+                    : 'bg-yellow-100 text-yellow-800'
+                }`}>
+                  {user.personalityAspectStatus || 'Pending'}
+                </span>
+              </div>
+              <div class="flex gap-2">
+                <a href="/personality-aspect-instructions" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium">
+                  Instructions
+                </a>
+                {user.personalityAspectStatus !== 'Completed' && (
+                  <a href="/tests/personality-aspect" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium">
+                    Start Test
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+
+          <!-- Behavior Response -->
+          {user?.enableBehaviorResponse && (
+            <div class="bg-white rounded-lg shadow p-6">
+              <h2 class="text-xl font-semibold text-gray-900 mb-2">Behavior Response</h2>
+              <p class="text-gray-600 mb-4 text-sm">Assess your behavioral patterns</p>
+              <div class="flex justify-between items-center mb-4">
+                <span class={`px-3 py-1 rounded-full text-sm ${
+                  user.behaviorResponseStatus === 'Completed' 
+                    ? 'bg-green-100 text-green-800' 
+                    : 'bg-yellow-100 text-yellow-800'
+                }`}>
+                  {user.behaviorResponseStatus || 'Pending'}
+                </span>
+              </div>
+              <div class="flex gap-2">
+                <a href="/behaviour-response-instructions" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium">
+                  Instructions
+                </a>
+                {user.behaviorResponseStatus !== 'Completed' && (
+                  <a href="/tests/behaviour-response" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium">
+                    Start Test
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {(!user?.enableGeneralAptitude && !user?.enableWorkValues && !user?.enableFiroB && !user?.enableInterestInventory && !user?.enablePersonalityAspect && !user?.enableBehaviorResponse) && (
+          <div class="bg-white rounded-lg shadow p-8 text-center">
+            <p class="text-gray-600 mb-4">No tests are currently available for your account.</p>
+            <p class="text-sm text-gray-500">Please contact your administrator to enable tests.</p>
+          </div>
+        )}
+      </div>
+    </div>
+  </main>
+  
+  <Footer client:load />
+</BaseLayout>
+
+

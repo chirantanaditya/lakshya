@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { getSession } from '../lib/session';
+
+const session = await getSession(Astro.cookies);
+---
+
+<BaseLayout 
+  title="Senior School Students | Lakshya Counselling"
+  description="Career counselling for senior school students choosing their streams."
+>
+  <Header client:load session={session} />
+  
+  <main class="min-h-screen py-12">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold text-gray-900 mb-6">For Senior School Students</h1>
+        
+        <div class="prose max-w-none">
+          <p class="text-xl text-gray-700 mb-8">
+            Students in the midst of picking their streams for their senior school years, 
+            who are confused and hesitant about this decisive choice.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">Stream Selection Support</h2>
+          
+          <div class="space-y-6 my-8">
+            <div class="bg-white rounded-lg shadow p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Aptitude Assessment</h3>
+              <p class="text-gray-600">
+                Comprehensive tests to understand your strengths, interests, and learning preferences.
+              </p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Stream Recommendations</h3>
+              <p class="text-gray-600">
+                Get personalized recommendations for Science, Commerce, Arts, or other streams based on your profile.
+              </p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Career Path Mapping</h3>
+              <p class="text-gray-600">
+                Understand how your stream choice impacts future career opportunities and higher education options.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 bg-primary-50 rounded-lg p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Make the Right Choice</h3>
+            <p class="text-gray-700 mb-4">
+              Don't let confusion hold you back. Get expert guidance to make an informed stream selection.
+            </p>
+            <div class="flex gap-4">
+              <a 
+                href="/register" 
+                class="px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium"
+              >
+                Register Now
+              </a>
+              <a 
+                href="https://tidycal.com/suresh1/about-lakshya-counselling" 
+                class="px-6 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg hover:bg-primary-50 transition-colors font-medium"
+              >
+                Book Consultation
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <Footer client:load />
+</BaseLayout>
+
+

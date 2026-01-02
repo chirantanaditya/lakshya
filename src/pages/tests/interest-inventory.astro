@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import TestContainer from '../../components/TestContainer';
+import { getSession } from '../../lib/session';
+import { getUserById } from '../../lib/auth';
+import { db } from '../../db';
+import { interestInventoryQuestions } from '../../db/schema';
+
+const session = await getSession(Astro.cookies);
+
+if (!session) {
+  return Astro.redirect('/login');
+}
+
+const user = await getUserById(session.userId);
+
+if (!user?.enableInterestInventory) {
+  return Astro.redirect('/tests');
+}
+
+if (user.interestInventoryStatus === 'Completed') {
+  return Astro.redirect('/dashboard');
+}
+
+const questions = await db
+  .select()
+  .from(interestInventoryQuestions)
+  .orderBy(interestInventoryQuestions.questionNumber);
+
+const formattedQuestions = questions.map((q) => ({
+  id: q.id,
+  questionNumber: q.questionNumber || '',
+  questionText: q.questionText || '',
+  options: (q.options as string[]) || [],
+}));
+---
+
+<BaseLayout title="Interest Inventory | Lakshya Counselling">
+  <Header client:load session={session} />
+  
+  <main class="min-h-screen py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <TestContainer
+        client:load
+        testType="interest-inventory"
+        testName="Interest Inventory"
+        questions={formattedQuestions}
+        onSubmit={async (responses) => {
+          const response = await fetch('/api/tests/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              testType: 'interest-inventory',
+              responses,
+            }),
+          });
+
+          if (!response.ok) {
+            const error = await response.json();
+            throw new Error(error.error || 'Failed to submit test');
+          }
+
+          window.location.href = '/dashboard';
+        }}
+      />
+    </div>
+  </main>
+  
+  <Footer client:load />
+</BaseLayout>
+

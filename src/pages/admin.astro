@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { getSession } from '../lib/session';
+import { isAdmin } from '../lib/admin';
+import AdminDashboard from '../components/AdminDashboard';
+
+const session = await getSession(Astro.cookies);
+
+if (!session) {
+  return Astro.redirect('/login?redirect=/admin');
+}
+
+// Check if user is admin
+const userIsAdmin = await isAdmin(session.userId);
+
+// Debug logging
+if (import.meta.env.DEV) {
+  console.log('[Admin Page] User email:', session.email);
+  console.log('[Admin Page] Is admin?', userIsAdmin);
+  console.log('[Admin Page] ADMIN_EMAILS:', import.meta.env.ADMIN_EMAILS || process.env.ADMIN_EMAILS || 'NOT SET');
+}
+
+if (!userIsAdmin) {
+  // In development, show a helpful error message
+  if (import.meta.env.DEV) {
+    console.error('[Admin Page] Access denied. User email:', session.email);
+    console.error('[Admin Page] Make sure ADMIN_EMAILS is set in .env and includes this email.');
+  }
+  return Astro.redirect('/dashboard');
+}
+---
+
+<BaseLayout title="Admin Dashboard | Lakshya Counselling">
+  <Header client:load session={session} />
+  
+  <main class="min-h-screen py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-7xl mx-auto">
+        <h1 class="text-3xl font-bold text-gray-900 mb-8">Admin Dashboard</h1>
+        <AdminDashboard client:load />
+      </div>
+    </div>
+  </main>
+  
+  <Footer client:load />
+</BaseLayout>
+

@@ -1,0 +1,323 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NavBar from '../components/NavBar';
+import FooterWhite from '../components/FooterWhite';
+import FooterGreen from '../components/FooterGreen';
+import { getSession } from '../lib/session';
+import { db } from '../db';
+import { testimonials } from '../db/schema';
+
+const session = await getSession(Astro.cookies);
+
+// Fetch testimonials from database
+const testimonialsData = await db
+  .select()
+  .from(testimonials)
+  .limit(6);
+---
+
+<BaseLayout 
+  title="India's Online Career Counselling Platform | Lakshya Counselling"
+  description="An online career counselling platform that aims at Developing & Creating Highly Efficient and Self Motivated Individuals."
+>
+  <NavBar client:load session={session} />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-500 to-primary-700 py-20 md:py-32 text-white relative">
+      <div class="absolute inset-0 opacity-10 pointer-events-none z-0">
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+      </div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-5xl md:text-6xl font-bold mb-6">
+            Get guided towards the right choice
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 text-primary-100">
+            We provide guidance & counselling that takes your career to the next level
+          </p>
+          
+          <a 
+            href="https://tidycal.com/suresh1/about-lakshya-counselling" 
+            class="inline-block px-8 py-4 bg-accent-red text-white rounded-4xl hover:bg-red-600 transition-colors font-medium text-lg"
+          >
+            Speak with us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dark Blue Section -->
+    <section class="bg-primary-700 py-20">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl md:text-5xl font-light text-white leading-relaxed">
+            Get a holistic assessment that gives you a <span class="font-bold">360 degrees</span> view of your <span class="font-bold">potential</span> and <span class="font-bold">personality</span>.
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- How we help? -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-semibold text-center text-black mb-16">
+          How we help?
+        </h2>
+        
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div class="bg-white p-8 rounded-lg">
+            <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Comprehensive Analysis</h3>
+            <p class="text-gray-600">
+              Understand your aptitude level, personality type, and area of interest which are integral components in shaping your professional identity.
+            </p>
+          </div>
+          
+          <div class="bg-white p-8 rounded-lg">
+            <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Personalized Counseling</h3>
+            <p class="text-gray-600">
+              Get one-on-one guidance tailored to your specific needs from our team of experienced counselors
+            </p>
+          </div>
+          
+          <div class="bg-white p-8 rounded-lg">
+            <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">In-Depth Report</h3>
+            <p class="text-gray-600">
+              Gain insights into the comprehensive overview of suggested career paths and potential opportunities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why enroll with us? -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl md:text-5xl font-semibold text-gray-900 mb-4">
+            Why enroll with us?
+          </h2>
+          <p class="text-xl text-gray-600 mb-12">
+            We offer holistic assessment that gives you a 360 degrees view of your potential and personality.
+          </p>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">Personalized Approach</h3>
+              <p class="text-gray-600">
+                Our expert counsellors take the time to understand your academic history, interests, and goals, ensuring that every piece of advice is custom-fit for you.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">Comprehensive Assessments</h3>
+              <p class="text-gray-600">
+                Our range of assessments dives deep into your learning style, aptitudes, and preferences. By understanding how you learn best, we can recommend study strategies and educational pathways that suit your unique needs.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">Academic Planning</h3>
+              <p class="text-gray-600">
+                From course selection and study schedules to time management techniques, we equip you with the tools to thrive academically. Our guidance extends beyond textbooks, helping you embrace effective learning practices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our tests are designed for -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-semibold text-black mb-16">
+          Our tests are designed for
+        </h2>
+        
+        <div class="space-y-8 max-w-5xl">
+          <!-- High School Students -->
+          <div class="flex items-start gap-6">
+            <div class="w-12 h-12 rounded-full bg-accent-orange flex-shrink-0"></div>
+            <div class="flex-1">
+              <h3 class="text-2xl font-semibold text-black mb-2">High School Students</h3>
+              <p class="text-lg text-black">
+                Students in their 9th and 10th standard, contemplating selecting the appropriate institution for their high school education.
+              </p>
+            </div>
+            <a href="/high-school-students" class="text-primary-500 hover:text-primary-600">
+              <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+          
+          <!-- Senior School Students -->
+          <div class="flex items-start gap-6">
+            <div class="w-12 h-12 rounded-full bg-accent-orange flex-shrink-0"></div>
+            <div class="flex-1">
+              <h3 class="text-2xl font-semibold text-black mb-2">Senior School Students</h3>
+              <p class="text-lg text-black">
+                Students in the midst of picking their streams for their senior school years, who are confused and hesitant about this decisive choice.
+              </p>
+            </div>
+            <a href="/senior-school-students" class="text-primary-500 hover:text-primary-600">
+              <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+          
+          <!-- College Students -->
+          <div class="flex items-start gap-6">
+            <div class="w-12 h-12 rounded-full bg-accent-orange flex-shrink-0"></div>
+            <div class="flex-1">
+              <h3 class="text-2xl font-semibold text-black mb-2">College Students</h3>
+              <p class="text-lg text-black">
+                Students exploring their future studying options who are unclear and muddled by the number of possibilities available.
+              </p>
+            </div>
+            <a href="/college-student" class="text-primary-500 hover:text-primary-600">
+              <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+          
+          <!-- Corporate Professional -->
+          <div class="flex items-start gap-6">
+            <div class="w-12 h-12 rounded-full bg-accent-orange flex-shrink-0"></div>
+            <div class="flex-1">
+              <h3 class="text-2xl font-semibold text-black mb-2">Corporate Professional</h3>
+              <p class="text-lg text-black">
+                Corporate professionals who are in search of a role that best suits their acquired skills and an environment that compliments their desires.
+              </p>
+            </div>
+            <a href="/corporate-professional" class="text-primary-500 hover:text-primary-600">
+              <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- We care. We listen. We answer. -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl md:text-5xl font-semibold text-gray-900 mb-4">
+            We care. <br />
+            We listen. <br />
+            We answer.
+          </h2>
+          <p class="text-xl text-gray-600 mb-12">
+            Unlike your schools and corporate office, we want to understand your personality rather than keep a score.
+          </p>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">Clarity on Future</h3>
+              <p class="text-gray-600">
+                Lakshaya aims to provide you with the best options and clarity to build your foundation on. Our career counselors go through the results of your career assessment with you, validate the report outcomes with real-life examples, and accordingly recommend career paths.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">Develop Efficiency & Motivation</h3>
+              <p class="text-gray-600">
+                Develop and spark high levels of efficiency and motivation within yourself using the best kind of help. With the right kind of motivation and efficiency you will find yourself at a better position to utilize your skills productively.
+              </p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">Experienced Psychologists & Counselors</h3>
+              <p class="text-gray-600">
+                We do not rely on scores and figures to tell us about you. Our team of experienced career counselors care tremendously to understand you completely and help you in your journey.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    {testimonialsData.length > 0 && (
+      <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl md:text-5xl font-semibold text-black mb-16 text-center">
+            Lakshya Counselling has added value to many
+          </h2>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {testimonialsData.map((testimonial, index) => {
+              // Cycle through border colors
+              const borderColors = [
+                'border-primary-500',
+                'border-accent-yellow',
+                'border-primary-500',
+                'border-accent-green',
+                'border-accent-orange',
+                'border-primary-500'
+              ];
+              const borderColor = borderColors[index % borderColors.length];
+              
+              return (
+                <div class={`border-2 ${borderColor} rounded-3xl p-6`}>
+                  <p class="text-lg text-black mb-6">
+                    {testimonial.testimonialText}
+                  </p>
+                  <p class="font-bold text-lg text-black mb-1">
+                    {testimonial.authorName || testimonial.name}
+                  </p>
+                  <p class="text-sm text-black opacity-70">
+                    {testimonial.authorTitle && testimonial.authorLocation 
+                      ? `${testimonial.authorTitle}, ${testimonial.authorLocation}`
+                      : testimonial.authorTitle || testimonial.authorLocation || ''}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- CTA Section -->
+    <section class="bg-primary-700 py-20 text-white relative">
+      <div class="absolute inset-0 opacity-10 pointer-events-none z-0">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary-500 to-primary-600"></div>
+      </div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl md:text-5xl font-bold mb-8">Make the right choice for your future</h2>
+          
+          <a 
+            href="https://tidycal.com/suresh1/about-lakshya-counselling" 
+            class="inline-block px-8 py-4 bg-white text-primary-600 rounded-4xl hover:bg-primary-50 transition-colors font-medium text-lg relative z-20"
+          >
+            Get a Free Consultation
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <FooterGreen client:load />
+  <FooterWhite client:load />
+</BaseLayout>

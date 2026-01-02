@@ -1,0 +1,2267 @@
+[
+  {
+    "questionNumber": "1",
+    "itemId": "wv-q1",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you get regard and status",
+        "status": "Prestige",
+        "attributes": [
+          "Prestige"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do original and imaginative activities",
+        "status": "Creativity",
+        "attributes": [
+          "Creativity"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "2",
+    "itemId": "wv-q2",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you get regard and status",
+        "status": "Prestige",
+        "attributes": [
+          "Prestige"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in wvhich you have work associatcs of your liking",
+        "status": "Associates",
+        "attributes": [
+          "Associates"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "3",
+    "itemId": "wv-q3",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you make your own decisions.",
+        "status": "Independence",
+        "attributes": [
+          "Independence"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you lead the kind ol hle you most enjoy",
+        "status": "Way of Life",
+        "attributes": [
+          "Way of Life"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "4",
+    "itemId": "wv-q4",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you try new and different johs rather than continuing the same thing.",
+        "status": "Variety",
+        "attributes": [
+          "Variety"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do original and imaginativc activitics.",
+        "status": "Creativity",
+        "attributes": [
+          "Creativity"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "5",
+    "itemId": "wv-q5",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you try new and different jobs rather than continuing the same thing.",
+        "status": "Variety",
+        "attributes": [
+          "Variety"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you get artistic and acsthctic satisfaction.",
+        "status": "Aesthetic",
+        "attributes": [
+          "Aesthetic"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "6",
+    "itemId": "wv-q6",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you fccl you receive sufficient financial returns.",
+        "status": "Economic Returns",
+        "attributes": [
+          "Economic Returns"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do things most people find as difficult.",
+        "status": "Security",
+        "attributes": [
+          "Security"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "7",
+    "itemId": "wv-q7",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you receive sufficient financial returns",
+        "status": "Economic Returns",
+        "attributes": [
+          "Economic Returns"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you get artistic and acsthetic satislaction.",
+        "status": "Aesthetic",
+        "attributes": [
+          "Aesthetic"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "8",
+    "itemId": "wv-q8",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you reccive sufficient financial returns.",
+        "status": "Economic Returns",
+        "attributes": [
+          "Economic Returns"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you get regard and status.",
+        "status": "Prestige",
+        "attributes": [
+          "Prestige"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "9",
+    "itemId": "wv-q9",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you feel you are doing selfless service to other people",
+        "status": "Altruism",
+        "attributes": [
+          "Altruism"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you like the setting (the physical working conditions) in which your job is done.",
+        "status": "Surrounding",
+        "attributes": [
+          "Surrounding"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "10",
+    "itemId": "wv-q10",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have to keep solving new problcms.",
+        "status": "Achievement",
+        "attributes": [
+          "Achievement"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you plan and organize the work of others.",
+        "status": "Management",
+        "attributes": [
+          "Management"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "11",
+    "itemId": "wv-q11",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have to keep solving new problems",
+        "status": "Achievement",
+        "attributes": [
+          "Achievement"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have work-associates of your liking.",
+        "status": "Associates",
+        "attributes": [
+          "Associates"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "12",
+    "itemId": "wv-q12",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have to kecp solving problems",
+        "status": "Achievement",
+        "attributes": [
+          "Achievement"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you feel you are doing seltless service to other people.",
+        "status": "Altruism",
+        "attributes": [
+          "Altruism"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "13",
+    "itemId": "wv-q13",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you get artistic and aesthetic satislaction.",
+        "status": "Altruism",
+        "attributes": [
+          "Aesthetic"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Wonk in which you plan and organize the wonh ol othes.",
+        "status": "Management",
+        "attributes": [
+          "Management"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "14",
+    "itemId": "wv-q14",
+    "options": [
+      {
+        "label": "a",
+        "text": "W'ork in which you have work associates of your liking.",
+        "status": "Associates",
+        "attributes": [
+          "Associates"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in wvhich you like the setting (the physical working conditions) in which your jub is donc.",
+        "status": "Surrounding",
+        "attributes": [
+          "Surrounding"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "15",
+    "itemId": "wv-q15",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which vou have a boss who gives vou a squ:arc deal",
+        "status": "Intellectual Stimulation",
+        "attributes": [
+          "Intellectual Stimulation"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Wnk m whn h you o thnpgs nst pxople ml as d1lln ull",
+        "status": "Security",
+        "attributes": [
+          "Security"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "16",
+    "itemId": "wv-q16",
+    "options": [
+      {
+        "label": "a",
+        "text": "Wok in which you lead the kind of lile you most enjoy.",
+        "status": "",
+        "attributes": [
+          "Way of Life"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have a supervisor( Superior) who is iriendly in his attitudes and approach.",
+        "status": "Supervisory Relations",
+        "attributes": [
+          "Supervisory Relations"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "17",
+    "itemId": "wv-q17",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have a supervisor (Supcrior) who is lncndly nn his attitudes and approach.",
+        "status": "",
+        "attributes": [
+          "Supervisory Relations"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do oniginal and imaginative activilies.",
+        "status": "",
+        "attributes": [
+          "Creativity"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "18",
+    "itemId": "wv-q18",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you plan and organize the work of others",
+        "status": "",
+        "attributes": [
+          "Management"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do original and imaginative activities.",
+        "status": "",
+        "attributes": [
+          "Creativity"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "19",
+    "itemId": "wv-q19",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you get regard and status.",
+        "status": "",
+        "attributes": [
+          "Prestige"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have a supervisor (Superior) who is friendhy in his attitudes and approach.",
+        "status": "",
+        "attributes": [
+          "Supervisory Relations"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "20",
+    "itemId": "wv-q20",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you make your own decisions.",
+        "status": "",
+        "attributes": [
+          "Independence"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you plan and organize the work of others.",
+        "status": "",
+        "attributes": [
+          "Management"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "21",
+    "itemId": "wv-q21",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you make your own decisions",
+        "status": "",
+        "attributes": [
+          "Independence"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have work-associates of your iking",
+        "status": "",
+        "attributes": [
+          "Associates"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "22",
+    "itemId": "wv-q22",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you try new and different jobs rather than continuing the same thing.",
+        "status": "",
+        "attributes": [
+          "Variety"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you like the setting (the physical working conditions)in which your job is done.",
+        "status": "",
+        "attributes": [
+          "Surrounding"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "23",
+    "itemId": "wv-q23",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you try new and dilferent jobs rather than continuing the same thing",
+        "status": "",
+        "attributes": [
+          "Variety"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have work associates of your liking.",
+        "status": "",
+        "attributes": [
+          "Associates"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "24",
+    "itemId": "wv-q24",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you feel you receive sufficient financial returns.",
+        "status": "",
+        "attributes": [
+          "Economic Returns"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you plan and organize the work of others.",
+        "status": "",
+        "attributes": [
+          "Management"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "25",
+    "itemId": "wv-q25",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you feel you receive sufficient financial retums.",
+        "status": "",
+        "attributes": [
+          "Economic Returns"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have work-associales of your liking.",
+        "status": "",
+        "attributes": [
+          "Associates"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "26",
+    "itemId": "wv-q26",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you fcel you are doing selíless service to other people.",
+        "status": "",
+        "attributes": [
+          "Altruism"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do things which most people find as dillicult.",
+        "status": "",
+        "attributes": [
+          "Security"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "27",
+    "itemId": "wv-q27",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you feel you are doing seliless service to other people.",
+        "status": "",
+        "attributes": [
+          "Altruism"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you get artistic and aesthetic satisfaction.",
+        "status": "",
+        "attributes": [
+          "Aesthetic"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "28",
+    "itemId": "wv-q28",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have to keep solving new problems",
+        "status": "",
+        "attributes": [
+          "Achievement"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do original imaginative activities.",
+        "status": "",
+        "attributes": [
+          "Creativity"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "29",
+    "itemId": "wv-q29",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have to kecp solving new problems",
+        "status": "",
+        "attributes": [
+          "Achievement"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have a boss who gives you a square deal.",
+        "status": "",
+        "attributes": [
+          "Intellectual Stimulation"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "30",
+    "itemId": "wv-q30",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have to keep solving new problems",
+        "status": "",
+        "attributes": [
+          "Achievement"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you receive suflicient financial returns.",
+        "status": "",
+        "attributes": [
+          "Economic Returns"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "31",
+    "itemId": "wv-q31",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you get artistic and aesthetic satisfaction",
+        "status": "",
+        "attributes": [
+          "Aesthetic"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do things which most pcoplc lind as difficul.",
+        "status": "",
+        "attributes": [
+          "Security"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "32",
+    "itemId": "wv-q32",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have work-associates of your liking",
+        "status": "",
+        "attributes": [
+          "Associates"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you hae a supervisor (superior) who is friendly in his attitudes and approach",
+        "status": "",
+        "attributes": [
+          "Supervisory Relations"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "33",
+    "itemId": "wv-q33",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have a boss who gives you a square deal.",
+        "status": "",
+        "attributes": [
+          "Intellectual Stimulation"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you lead the kind ol life you most enjoy",
+        "status": "",
+        "attributes": [
+          "Way of Life"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "34",
+    "itemId": "wv-q34",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you lead the kind of life you most enjoy",
+        "status": "",
+        "attributes": [
+          "Way of Life"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you plan and organize the work of others.",
+        "status": "",
+        "attributes": [
+          "Management"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "35",
+    "itemId": "wv-q35",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you like the setting (the physical working conditions) in which your job is done.",
+        "status": "",
+        "attributes": [
+          "Surrounding"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "work in which you do things which most people find difficult.",
+        "status": "",
+        "attributes": [
+          "Security"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "36",
+    "itemId": "wv-q36",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you get regard and status.",
+        "status": "",
+        "attributes": [
+          "Prestige"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you like the setting (the physical working conditions) in which your job is done.",
+        "status": "",
+        "attributes": [
+          "Surrounding"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "37",
+    "itemId": "wv-q37",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you make your own decisions.",
+        "status": "",
+        "attributes": [
+          "Independence"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do original and imaginative activities.",
+        "status": "",
+        "attributes": [
+          "Creativity"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "38",
+    "itemId": "wv-q38",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you make your own decisions.",
+        "status": "",
+        "attributes": [
+          "Independence"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have a boss who gives you a squarc deal.",
+        "status": "",
+        "attributes": [
+          "Intellectual Stimulation"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "39",
+    "itemId": "wv-q39",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you try new and different jobs rather than continuing the same things.",
+        "status": "",
+        "attributes": [
+          "Variety"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do things which most people find as difficult",
+        "status": "",
+        "attributes": [
+          "Security"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "40",
+    "itemId": "wv-q40",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you try ncw and different jobs rather than continuing the same thing",
+        "status": "",
+        "attributes": [
+          "Variety"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have a boss who gives you a square deal.",
+        "status": "",
+        "attributes": [
+          "Intellectual Stimulation"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "41",
+    "itemId": "wv-q41",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in vhich you fccl you reccive sullicient financial returns.",
+        "status": "",
+        "attributes": [
+          "Economic Returns"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do original and imaginative activities.",
+        "status": "",
+        "attributes": [
+          "Creativity"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "42",
+    "itemId": "wv-q42",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you feel you receive sufficient financial returms",
+        "status": "",
+        "attributes": [
+          "Economic Returns"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have a boss who gives you a square deal.",
+        "status": "",
+        "attributes": [
+          "Intellectual Stimulation"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "43",
+    "itemId": "wv-q43",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you feel you are doing selfless service to other people.",
+        "status": "",
+        "attributes": [
+          "Altruism"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do original and imaginative activities.",
+        "status": "",
+        "attributes": [
+          "Creativity"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "46",
+    "itemId": "wv-q46",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have to heep solving new problcm",
+        "status": "",
+        "attributes": [
+          "Achievement"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you lead the kind of life you most enjoy.",
+        "status": "",
+        "attributes": [
+          "Way of Life"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "47",
+    "itemId": "wv-q47",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you get artistic and aesthetic satisfaction.",
+        "status": "",
+        "attributes": [
+          "Aesthetic"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have a supervisor (Superior) who is friendly in his altitude and approach.",
+        "status": "",
+        "attributes": [
+          "Supervisory Relations"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "48",
+    "itemId": "wv-q48",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have to keep solving nevw problems.",
+        "status": "",
+        "attributes": [
+          "Achievement"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you try new and different jobs rather than continuing the same thing.",
+        "status": "",
+        "attributes": [
+          "Variety"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "49",
+    "itemId": "wv-q49",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have work-associales ol your liking.",
+        "status": "",
+        "attributes": [
+          "Associates"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have a boss who gives you a square deal.",
+        "status": "",
+        "attributes": [
+          "Intellectual Stimulation"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "50",
+    "itemId": "wv-q50",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have a boss who gives you a square deal",
+        "status": "",
+        "attributes": [
+          "Intellectual Stimulation"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you like the seting (the physical working conditions) in which your job is done.",
+        "status": "",
+        "attributes": [
+          "Surrounding"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "51",
+    "itemId": "wv-q51",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you lead the kind of life you most enjoy",
+        "status": "",
+        "attributes": [
+          "Way of Life"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do things which most people find as dillicut.",
+        "status": "",
+        "attributes": [
+          "Security"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "52",
+    "itemId": "wv-q52",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have a supervisor (Superior) who is fnendly in his attitudes and approach.",
+        "status": "",
+        "attributes": [
+          "Supervisory Relations"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you plan and organize the work of others",
+        "status": "",
+        "attributes": [
+          "Management"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "53",
+    "itemId": "wv-q53",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you do things which most people find as difficult.",
+        "status": "",
+        "attributes": [
+          "Security"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do original and imaginative activities",
+        "status": "",
+        "attributes": [
+          "Creativity"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "54",
+    "itemId": "wv-q54",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you get regard and status",
+        "status": "",
+        "attributes": [
+          "Prestige"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do things which most people lind as diflicult.",
+        "status": "",
+        "attributes": [
+          "Security"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "55",
+    "itemId": "wv-q55",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you make your own decisions.",
+        "status": "",
+        "attributes": [
+          "Independence"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you like the setting (the physical working conditions) in which your job is done.",
+        "status": "",
+        "attributes": [
+          "Surrounding"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "56",
+    "itemId": "wv-q56",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you get regard and status",
+        "status": "",
+        "attributes": [
+          "Prestige"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you get artistic and esthetic satisfaction.",
+        "status": "",
+        "attributes": [
+          "Aesthetic"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "57",
+    "itemId": "wv-q57",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you try new and different jobs rather than continuing the same thing.",
+        "status": "",
+        "attributes": [
+          "Variety"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you plan and organize the work of others.",
+        "status": "",
+        "attributes": [
+          "Management"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "58",
+    "itemId": "wv-q58",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you feel you receive sutlicient financial returns",
+        "status": "",
+        "attributes": [
+          "Economic Returns"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have a supervisor (Superior) who is friendly m his altitudes and approach.",
+        "status": "",
+        "attributes": [
+          "Supervisory Relations"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "59",
+    "itemId": "wv-q59",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you try new and differcnt jobs rather than continuing the same thing.",
+        "status": "",
+        "attributes": [
+          "Variety"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you lead the kind of life you most enjoy.",
+        "status": "",
+        "attributes": [
+          "Way of Life"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "60",
+    "itemId": "wv-q60",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you feel you are doing selfless a service to other people.",
+        "status": "",
+        "attributes": [
+          "Altruism"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which your plan and organize the work of others",
+        "status": "",
+        "attributes": [
+          "Management"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "61",
+    "itemId": "wv-q61",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you try new and diflerent jobs rather than continuing the same thing.",
+        "status": "",
+        "attributes": [
+          "Variety"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you get regards and status.",
+        "status": "",
+        "attributes": [
+          "Prestige"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "62",
+    "itemId": "wv-q62",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you fecl you are doing sclfless service to otherpeople",
+        "status": "",
+        "attributes": [
+          "Altruism"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have work-associates of yourliking",
+        "status": "",
+        "attributes": [
+          "Associates"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "63",
+    "itemId": "wv-q63",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have to keep solving new problems",
+        "status": "",
+        "attributes": [
+          "Achievement"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you like the setting ( the physical working conditions ) in which your job is done.",
+        "status": "",
+        "attributes": [
+          "Surrounding"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "64",
+    "itemId": "wv-q64",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you feel you are doing selfless service to other people",
+        "status": "",
+        "attributes": [
+          "Altruism"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you try new and different jobs rather than continuing the same thing",
+        "status": "",
+        "attributes": [
+          "Variety"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "65",
+    "itemId": "wv-q65",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have to keep solving new problems.",
+        "status": "",
+        "attributes": [
+          "Achievement"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you make your own decisions.",
+        "status": "",
+        "attributes": [
+          "Independence"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "66",
+    "itemId": "wv-q66",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you get artistic and aesthetic satisfaction.",
+        "status": "",
+        "attributes": [
+          "Aesthetic"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you like the setting (the physical working conditions) in which your job is done.",
+        "status": "",
+        "attributes": [
+          "Surrounding"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "67",
+    "itemId": "wv-q67",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in vhich you have work-associates of your liking",
+        "status": "",
+        "attributes": [
+          "Associates"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do things which most people find as difficult.",
+        "status": "",
+        "attributes": [
+          "Security"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "68",
+    "itemId": "wv-q68",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have a boss who gives you a square deal.",
+        "status": "",
+        "attributes": [
+          "Intellectual Stimulation"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have a supervisor (superior) who is friendly in his attitudes and approach.",
+        "status": "",
+        "attributes": [
+          "Supervisory Relations"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "69",
+    "itemId": "wv-q69",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you lead the kind of life you most enjoy",
+        "status": "",
+        "attributes": [
+          "Way of Life"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you like the setting (the physical working conditions) in which your job is done",
+        "status": "",
+        "attributes": [
+          "Surrounding"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "70",
+    "itemId": "wv-q70",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in wvhich you have a supervisor (superior) who is friendly in his attitudes and approach.",
+        "status": "",
+        "attributes": [
+          "Supervisory Relations"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do things wlhich most people find as difficult.",
+        "status": "",
+        "attributes": [
+          "Security"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "71",
+    "itemId": "wv-q71",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you do things which most people find as diflicult.",
+        "status": "",
+        "attributes": [
+          "Security"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you plan and organize the work of othes.",
+        "status": "",
+        "attributes": [
+          "Management"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "72",
+    "itemId": "wv-q72",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you get regard and status",
+        "status": "",
+        "attributes": [
+          "Prestige"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you plan and organize the work of others",
+        "status": "",
+        "attributes": [
+          "Management"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "73",
+    "itemId": "wv-q73",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you make your own decisions.",
+        "status": "",
+        "attributes": [
+          "Independence"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have a supervisor (superior) who is friendly in his attitudes and approach.",
+        "status": "",
+        "attributes": [
+          "Supervisory Relations"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "74",
+    "itemId": "wv-q74",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you get regard and status.",
+        "status": "",
+        "attributes": [
+          "Prestige"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have a boss who gives you a square deal.",
+        "status": "",
+        "attributes": [
+          "Intellectual Stimulation"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "75",
+    "itemId": "wv-q75",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you make your own decisions.",
+        "status": "",
+        "attributes": [
+          "Independence"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you get regard and status",
+        "status": "",
+        "attributes": [
+          "Prestige"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "76",
+    "itemId": "wv-q76",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you try new and different jobs rather than continuing the same thing.",
+        "status": "",
+        "attributes": [
+          "Variety"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have a supervisor (supeior) who is friendly in his attitudes and approach.",
+        "status": "",
+        "attributes": [
+          "Supervisory Relations"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "77",
+    "itemId": "wv-q77",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you feel you receive sufficient financial returns",
+        "status": "",
+        "attributes": [
+          "Economic Returns"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Wolk in which you lead the kind of lile you nmost enjoy.",
+        "status": "",
+        "attributes": [
+          "Way of Life"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "78",
+    "itemId": "wv-q78",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you feel you are doing selfless service to other people.",
+        "status": "",
+        "attributes": [
+          "Altruism"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you lead the kind of life you most enjoy",
+        "status": "",
+        "attributes": [
+          "Way of Life"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "79",
+    "itemId": "wv-q79",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you receive sufficient financial returms.",
+        "status": "",
+        "attributes": [
+          "Economic Returns"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you make your own decisions",
+        "status": "",
+        "attributes": [
+          "Independence"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "80",
+    "itemId": "wv-q80",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you feel you are doing selfless service to other people",
+        "status": "",
+        "attributes": [
+          "Altruism"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you get regard and status.",
+        "status": "",
+        "attributes": [
+          "Prestige"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "81",
+    "itemId": "wv-q81",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you hae to keep solving new problems.",
+        "status": "",
+        "attributes": [
+          "Achievement"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do things which most people find as difticult.",
+        "status": "",
+        "attributes": [
+          "Security"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "82",
+    "itemId": "wv-q82",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you get artistic and aesthetic satisfaction.",
+        "status": "",
+        "attributes": [
+          "Aesthetic"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have a boss who gives you a square deal.",
+        "status": "",
+        "attributes": [
+          "Intellectual Stimulation"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "83",
+    "itemId": "wv-q83",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have to keep solving new problem",
+        "status": "",
+        "attributes": [
+          "Achievement"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you get regard and status.",
+        "status": "",
+        "attributes": [
+          "Prestige"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "84",
+    "itemId": "wv-q84",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have work-asociates of your liking",
+        "status": "",
+        "attributes": [
+          "Aesthetic",
+          "Associates"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you lead the kind of life you most enjoy",
+        "status": "",
+        "attributes": [
+          "Way of Life"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "85",
+    "itemId": "wv-q85",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have a boss who gives you a square deal",
+        "status": "",
+        "attributes": [
+          "Intellectual Stimulation"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do original and imaginative activities.",
+        "status": "",
+        "attributes": [
+          "Creativity"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "86",
+    "itemId": "wv-q86",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have work-associates of your liking.",
+        "status": "",
+        "attributes": [
+          "Associates"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you plan and organize the work of others.",
+        "status": "",
+        "attributes": [
+          "Management"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "87",
+    "itemId": "wv-q87",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have a supervisor (superior) who is friendly in his altitudes and approach.",
+        "status": "",
+        "attributes": [
+          "Supervisory Relations"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you like the setting (the physical working conditions) which your job is done",
+        "status": "",
+        "attributes": [
+          "Surrounding"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "88",
+    "itemId": "wv-q88",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you like the which setting (the physical working conditions) in your job is done",
+        "status": "",
+        "attributes": [
+          "Surrounding"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you plan and organize the work of others.",
+        "status": "",
+        "attributes": [
+          "Management"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "89",
+    "itemId": "wv-q89",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you get artistic and aesthetic satisfaction",
+        "status": "",
+        "attributes": []
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have work associate of your liking",
+        "status": "",
+        "attributes": [
+          "Associates"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "90",
+    "itemId": "wv-q90",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you get regard and status.",
+        "status": "",
+        "attributes": [
+          "Prestige"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you lead the kind of life you most enjoy",
+        "status": "",
+        "attributes": [
+          "Way of Life"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "91",
+    "itemId": "wv-q91",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you make your own decisions.",
+        "status": "",
+        "attributes": [
+          "Independence"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do things which most pcople find as diflicult.",
+        "status": "",
+        "attributes": [
+          "Security"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "92",
+    "itemId": "wv-q92",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you make your own decisions.",
+        "status": "",
+        "attributes": [
+          "Independence"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you get artistic and acsthetic satisfaction.",
+        "status": "",
+        "attributes": [
+          "Aesthetic"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "93",
+    "itemId": "wv-q93",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you try new and different jobs rather than continuing the same thing.",
+        "status": "",
+        "attributes": [
+          "Variety"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you make your own decisions.",
+        "status": "",
+        "attributes": [
+          "Independence"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "94",
+    "itemId": "wv-q94",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you fecl you receive sufficient financial retums",
+        "status": "",
+        "attributes": [
+          "Economic Returns"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you like the setting (the physical working conditions) in which your job is donc.",
+        "status": "",
+        "attributes": [
+          "Surrounding"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "95",
+    "itemId": "wv-q95",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you try new and differcnt jobs rather than continuing the same thing.",
+        "status": "",
+        "attributes": [
+          "Variety"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you reccive sufficient financial returns.",
+        "status": "",
+        "attributes": [
+          "Economic Returns"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "96",
+    "itemId": "wv-q96",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you fecl you are doing selfless service to other people.",
+        "status": "",
+        "attributes": [
+          "Altruism"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have a boss who gives you a square deal.",
+        "status": "",
+        "attributes": [
+          "Intellectual Stimulation"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "97",
+    "itemId": "wv-q97",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have to keep solving new problems.",
+        "status": "",
+        "attributes": [
+          "Achievement"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you have a supcrvisor (supenior) who is friendly in his attitudes and approach",
+        "status": "",
+        "attributes": [
+          "Supervisory Relations"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "98",
+    "itemId": "wv-q98",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you fcel you are doing selfless service to other pcopl",
+        "status": "",
+        "attributes": [
+          "Altruism"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you make your own decisions.",
+        "status": "",
+        "attributes": [
+          "Independence"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "99",
+    "itemId": "wv-q99",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have to keep solving new problems",
+        "status": "",
+        "attributes": [
+          "Achievement"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you get artistic and aesthetic satisfaction",
+        "status": "",
+        "attributes": [
+          "Aesthetic"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "100",
+    "itemId": "wv-q100",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you gct artistic and acsthetic satisfaction",
+        "status": "",
+        "attributes": [
+          "Aesthetic"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you lead the kind of life you most enjoy",
+        "status": "",
+        "attributes": [
+          "Way of Life"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "101",
+    "itemId": "wv-q101",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you have work-associates of your liking.",
+        "status": "",
+        "attributes": [
+          "Associates"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do oniginal and imaginative activities.",
+        "status": "",
+        "attributes": [
+          "Creativity"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "102",
+    "itemId": "wv-q102",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you get artistic and aesthetic satisfaction.",
+        "status": "",
+        "attributes": [
+          "Aesthetic"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Wok in wlih you do onginal and imaginative ativiles.",
+        "status": "",
+        "attributes": [
+          "Creativity"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "103",
+    "itemId": "wv-q103",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in wlhich you have a boss who gives you a square deal.",
+        "status": "",
+        "attributes": [
+          "Intellectual Stimulation"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in vhich you plan and organize the vork of others.",
+        "status": "",
+        "attributes": [
+          "Management"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "104",
+    "itemId": "wv-q104",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you lead the kind of life vou most enjoy",
+        "status": "",
+        "attributes": [
+          "Way of Life"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do original and imaginative activitics",
+        "status": "",
+        "attributes": [
+          "Creativity"
+        ]
+      }
+    ]
+  },
+  {
+    "questionNumber": "105",
+    "itemId": "wv-q105",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work in which you like the setting (the physical working conditions) in which your job is done.",
+        "status": "",
+        "attributes": [
+          "Surrounding"
+        ]
+      },
+      {
+        "label": "b",
+        "text": "Work in which you do original and imaginative activities.",
+        "status": "",
+        "attributes": [
+          "Creativity"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import TestContainer from '../../components/TestContainer';
+import { getSession } from '../../lib/session';
+import { getUserById } from '../../lib/auth';
+import { db } from '../../db';
+import { firoBQuestions } from '../../db/schema';
+
+const session = await getSession(Astro.cookies);
+
+if (!session) {
+  return Astro.redirect('/login');
+}
+
+const user = await getUserById(session.userId);
+
+if (!user?.enableFiroB) {
+  return Astro.redirect('/tests');
+}
+
+if (user.firoBStatus === 'Completed') {
+  return Astro.redirect('/dashboard');
+}
+
+const questions = await db
+  .select()
+  .from(firoBQuestions)
+  .orderBy(firoBQuestions.questionNumber);
+
+const formattedQuestions = questions.map((q) => ({
+  id: q.id,
+  questionNumber: q.questionNumber || '',
+  questionText: q.questionText || '',
+  options: (q.options as string[]) || [],
+}));
+---
+
+<BaseLayout title="FIRO-B | Lakshya Counselling">
+  <Header client:load session={session} />
+  
+  <main class="min-h-screen py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <TestContainer
+        client:load
+        testType="firo-b"
+        testName="FIRO-B - Fundamental Interpersonal Relations Orientation"
+        questions={formattedQuestions}
+        onSubmit={async (responses) => {
+          const response = await fetch('/api/tests/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              testType: 'firo-b',
+              responses,
+            }),
+          });
+
+          if (!response.ok) {
+            const error = await response.json();
+            throw new Error(error.error || 'Failed to submit test');
+          }
+
+          window.location.href = '/dashboard';
+        }}
+      />
+    </div>
+  </main>
+  
+  <Footer client:load />
+</BaseLayout>
+

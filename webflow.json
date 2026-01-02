@@ -1,0 +1,23 @@
+{
+  "devlink": {
+    "rootDir": "./devlink",
+    "cssModules": true,
+    "fileExtensions": {
+      "js": "jsx"
+    }
+  },
+  "telemetry": {
+    "global": {
+      "allowTelemetry": true,
+      "lastPrompted": 1766558688606,
+      "version": "1.10.0"
+    }
+  },
+  "library": {
+    "components": [
+      "**/*.webflow.@(js|jsx|mjs|ts|tsx)"
+    ],
+    "name": "Nice And Easy Code Library",
+    "description": "Library of Webflow Components"
+  }
+}

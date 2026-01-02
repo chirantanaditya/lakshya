@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { getSession } from '../lib/session';
+
+const session = await getSession(Astro.cookies);
+
+if (!session) {
+  return Astro.redirect('/login');
+}
+---
+
+<BaseLayout title="Interest Inventory Instructions | Lakshya Counselling">
+  <Header client:load session={session} />
+  
+  <main class="min-h-screen py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto bg-white rounded-lg shadow p-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-6">
+          Test Assessment<br />
+          <span class="text-blue-600">Interest Inventory</span>
+        </h1>
+        
+        <div class="prose max-w-none">
+          <h2 class="text-2xl font-semibold text-gray-900 mt-6 mb-4">Instructions</h2>
+          <p class="text-gray-700 mb-4">
+            This assessment helps identify your areas of interest and preferences, which are crucial in choosing the right career path.
+          </p>
+          <p class="text-gray-700 mb-4">
+            Select activities and topics that genuinely interest you. Think about what you enjoy doing, not what you think you should enjoy.
+          </p>
+
+          <div class="mt-8 flex gap-4">
+            <a 
+              href="/tests/interest-inventory" 
+              class="px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium"
+            >
+              Start Assessment
+            </a>
+            <a 
+              href="/tests" 
+              class="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors font-medium"
+            >
+              Back to Tests
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <Footer client:load />
+</BaseLayout>
+
+
