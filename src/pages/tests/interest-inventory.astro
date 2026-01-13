@@ -2,11 +2,11 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import TestContainer from '../../components/TestContainer';
+import InterestInventoryTest from '../../components/InterestInventoryTest';
 import { getSession } from '../../lib/session';
 import { getUserById } from '../../lib/auth';
-import { db } from '../../db';
-import { interestInventoryQuestions } from '../../db/schema';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 
 const session = await getSession(Astro.cookies);
 
@@ -24,52 +24,86 @@ if (user.interestInventoryStatus === 'Completed') {
   return Astro.redirect('/dashboard');
 }
 
-const questions = await db
-  .select()
-  .from(interestInventoryQuestions)
-  .orderBy(interestInventoryQuestions.questionNumber);
-
-const formattedQuestions = questions.map((q) => ({
-  id: q.id,
-  questionNumber: q.questionNumber || '',
-  questionText: q.questionText || '',
-  options: (q.options as string[]) || [],
-}));
+// Load questions from JSON file
+let questions: Array<{ id: string; questionNumber: number; questionText: string; category: string }> = [];
+try {
+  const jsonPath = join(process.cwd(), 'data', 'interest-inventory-questions.json');
+  const fileContent = readFileSync(jsonPath, 'utf-8');
+  const questionsData = JSON.parse(fileContent);
+  
+  questions = questionsData.map((q: any) => ({
+    id: q.id || `q${q.questionNumber}`,
+    questionNumber: q.questionNumber,
+    questionText: q.questionText,
+    category: q.category || 'medical',
+  }));
+} catch (error: any) {
+  console.error('Error loading interest inventory questions:', error);
+  // Fallback: try loading from database if JSON fails
+  const { db } = await import('../../db');
+  const { interestInventoryQuestions } = await import('../../db/schema');
+  const dbQuestions = await db
+    .select()
+    .from(interestInventoryQuestions)
+    .orderBy(interestInventoryQuestions.questionNumber);
+  
+  // Generate categories based on question number pattern (cycles every 5)
+  const categories = ['medical', 'technology', 'commerce', 'arts', 'fine-arts'];
+  questions = dbQuestions.map((q, index) => ({
+    id: q.id,
+    questionNumber: parseInt(q.questionNumber || String(index + 1)) || index + 1,
+    questionText: q.questionText || '',
+    category: categories[index % 5] as 'medical' | 'technology' | 'commerce' | 'arts' | 'fine-arts',
+  }));
+}
 ---
 
 <BaseLayout title="Interest Inventory | Lakshya Counselling">
   <Header client:load session={session} />
   
-  <main class="min-h-screen py-12 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <TestContainer
-        client:load
-        testType="interest-inventory"
-        testName="Interest Inventory"
-        questions={formattedQuestions}
-        onSubmit={async (responses) => {
-          const response = await fetch('/api/tests/submit', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              testType: 'interest-inventory',
-              responses,
-            }),
-          });
+  <main class="min-h-screen bg-gray-50 pb-32">
+    <div class="page-padding _100-width px-4 py-8">
+      <div class="container-large container mx-auto max-w-7xl">
+        <InterestInventoryTest
+          client:load
+          questions={questions}
+          onSubmit={async (responses, scores) => {
+            try {
+              const response = await fetch('/api/tests/submit', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  testType: 'interest-inventory',
+                  responses,
+                  scores,
+                }),
+              });
 
-          if (!response.ok) {
-            const error = await response.json();
-            throw new Error(error.error || 'Failed to submit test');
-          }
+              let data: any;
+              try {
+                data = await response.json();
+              } catch (e) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+              }
 
-          window.location.href = '/dashboard';
-        }}
-      />
+              if (!response.ok) {
+                throw new Error(data.error || 'Failed to submit test');
+              }
+
+              // Show success message briefly
+              alert('Test submitted successfully!');
+              window.location.href = '/dashboard';
+            } catch (err: any) {
+              console.error('Error submitting test:', err);
+              throw err;
+            }
+          }}
+        />
+      </div>
     </div>
   </main>
   
   <Footer client:load />
 </BaseLayout>
-

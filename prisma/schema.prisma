@@ -1,0 +1,12 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  // url removed - now configured in prisma.config.ts for Prisma 7
+}
+
+// Models will be added here
+// You can introspect your existing database with: pnpx prisma db pull

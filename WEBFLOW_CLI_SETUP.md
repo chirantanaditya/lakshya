@@ -5,25 +5,25 @@ The `webflow` command is not recognized because the Webflow CLI is not installed
 
 ## Solution
 
-### Option 1: Use npm scripts (Recommended)
-I've added npm scripts to your `package.json` so you can run Webflow CLI commands through npm:
+### Option 1: Use pnpm scripts (Recommended)
+I've added pnpm scripts to your `package.json` so you can run Webflow CLI commands through pnpm:
 
 ```powershell
 # Login to Webflow
-npm run webflow:auth
+pnpm run webflow:auth
 
 # Run DevLink
-npm run webflow:devlink
+pnpm run webflow:devlink
 
 # Run any webflow command
-npm run webflow -- [command]
+pnpm run webflow -- [command]
 ```
 
 ### Option 2: Install globally
 If you want to use `webflow` directly from the command line:
 
 ```powershell
-npm install -g @webflow/webflow-cli
+pnpm install -g @webflow/webflow-cli
 ```
 
 After global installation, you can use:
@@ -32,12 +32,12 @@ webflow auth login
 webflow devlink
 ```
 
-### Option 3: Use npx (No installation needed)
+### Option 3: Use pnpx (No installation needed)
 You can run the CLI without installing it globally:
 
 ```powershell
-npx @webflow/webflow-cli auth login
-npx @webflow/webflow-cli devlink
+pnpx @webflow/webflow-cli auth login
+pnpx @webflow/webflow-cli devlink
 ```
 
 ## Current Setup
@@ -46,13 +46,13 @@ The Webflow CLI is already in your `devDependencies` in `package.json`:
 - Package: `@webflow/webflow-cli`
 - Version: `^1.10.0`
 
-## Available npm Scripts
+## Available pnpm Scripts
 
-After running `npm install`, you can use:
+After running `pnpm install`, you can use:
 
-- `npm run webflow:auth` - Login to Webflow
-- `npm run webflow:devlink` - Run DevLink
-- `npm run webflow -- [command]` - Run any webflow CLI command
+- `pnpm run webflow:auth` - Login to Webflow
+- `pnpm run webflow:devlink` - Run DevLink
+- `pnpm run webflow -- [command]` - Run any webflow CLI command
 
 ## DevLink Configuration
 
@@ -64,9 +64,9 @@ Your `webflow.json` file is already configured for DevLink:
 
 ## Next Steps
 
-1. Run `npm install` to ensure all dependencies are installed
-2. Use `npm run webflow:auth` to authenticate with Webflow
-3. Use `npm run webflow:devlink` to start the DevLink connection
+1. Run `pnpm install` to ensure all dependencies are installed
+2. Use `pnpm run webflow:auth` to authenticate with Webflow
+3. Use `pnpm run webflow:devlink` to start the DevLink connection
 
 ## Troubleshooting
 
@@ -77,18 +77,18 @@ If you still get errors:
    node --version
    ```
 
-2. **Clear npm cache**:
+2. **Clear pnpm cache**:
    ```powershell
-   npm cache clean --force
+   pnpm store prune
    ```
 
 3. **Reinstall dependencies**:
    ```powershell
-   npm install
+   pnpm install
    ```
 
-4. **Check PATH**: Make sure npm global bin directory is in your PATH
+4. **Check PATH**: Make sure pnpm global bin directory is in your PATH
    ```powershell
-   npm config get prefix
+   pnpm config get prefix
    ```
 

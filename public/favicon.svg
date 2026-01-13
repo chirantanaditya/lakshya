@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Dark gray circular background with concentric rings -->
+  <circle cx="32" cy="32" r="30" fill="#3a3a3a" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#4a4a4a" stroke-width="1" opacity="0.5"/>
+  <circle cx="32" cy="32" r="18" fill="none" stroke="#4a4a4a" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Red wing shape (left side) -->
+  <path d="M 16 32 Q 20 28, 24 26 Q 26 24, 28 26 Q 30 28, 32 32" 
+        fill="#f82c2d" 
+        stroke="#c01f20" 
+        stroke-width="1"/>
+  <path d="M 16 32 Q 18 34, 22 35 Q 26 36, 28 34 Q 30 32, 32 32" 
+        fill="#f82c2d" 
+        stroke="#c01f20" 
+        stroke-width="1"/>
+  
+  <!-- Blue wing shape (right side) -->
+  <path d="M 48 32 Q 44 28, 40 26 Q 38 24, 36 26 Q 34 28, 32 32" 
+        fill="#016295" 
+        stroke="#013a59" 
+        stroke-width="1"/>
+  <path d="M 48 32 Q 46 34, 42 35 Q 38 36, 36 34 Q 34 32, 32 32" 
+        fill="#016295" 
+        stroke="#013a59" 
+        stroke-width="1"/>
+  
+  <!-- Bright cyan pixel at center where shapes converge -->
+  <circle cx="32" cy="32" r="2" fill="#00ffff"/>
+</svg>

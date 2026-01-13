@@ -2,11 +2,11 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import TestContainer from '../../components/TestContainer';
+import BehaviourResponseTest from '../../components/BehaviourResponseTest';
 import { getSession } from '../../lib/session';
 import { getUserById } from '../../lib/auth';
-import { db } from '../../db';
-import { behaviorResponseQuestions } from '../../db/schema';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 
 const session = await getSession(Astro.cookies);
 
@@ -24,52 +24,133 @@ if (user.behaviorResponseStatus === 'Completed') {
   return Astro.redirect('/dashboard');
 }
 
-const questions = await db
-  .select()
-  .from(behaviorResponseQuestions)
-  .orderBy(behaviorResponseQuestions.questionNumber);
-
-const formattedQuestions = questions.map((q) => ({
-  id: q.id,
-  questionNumber: q.questionNumber || '',
-  questionText: q.questionText || '',
-  options: (q.options as string[]) || [],
-}));
+// Load questions from JSON file
+let questions: Array<{ id: string; questionNumber: number; options: Array<{ text: string; status: string }> }> = [];
+try {
+  const jsonPath = join(process.cwd(), 'data', 'behaviour-response-questions.json');
+  const fileContent = readFileSync(jsonPath, 'utf-8');
+  const questionsData = JSON.parse(fileContent);
+  
+  questions = questionsData.map((q: any) => ({
+    id: q.id || `br-q${q.questionNumber}`,
+    questionNumber: q.questionNumber,
+    options: q.options || [],
+  }));
+} catch (error: any) {
+  console.error('Error loading behaviour response questions:', error);
+  // Fallback: try loading from database if JSON fails
+  const { db } = await import('../../db');
+  const { behaviorResponseQuestions } = await import('../../db/schema');
+  const dbQuestions = await db
+    .select()
+    .from(behaviorResponseQuestions)
+    .orderBy(behaviorResponseQuestions.questionNumber);
+  
+  questions = dbQuestions.map((q, index) => ({
+    id: q.id,
+    questionNumber: parseInt(q.questionNumber || String(index + 1)) || index + 1,
+    options: (q.options as any) || [],
+  }));
+}
 ---
 
 <BaseLayout title="Behaviour Response | Lakshya Counselling">
   <Header client:load session={session} />
   
-  <main class="min-h-screen py-12 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <TestContainer
-        client:load
-        testType="behaviour-response"
-        testName="Behaviour Response"
-        questions={formattedQuestions}
-        onSubmit={async (responses) => {
-          const response = await fetch('/api/tests/submit', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              testType: 'behaviour-response',
-              responses,
-            }),
-          });
-
-          if (!response.ok) {
-            const error = await response.json();
-            throw new Error(error.error || 'Failed to submit test');
-          }
-
-          window.location.href = '/dashboard';
-        }}
-      />
+  <main class="min-h-screen bg-gray-50 pb-32">
+    <div class="page-padding _100-width px-4 py-8">
+      <div class="container-large container mx-auto max-w-7xl">
+        <BehaviourResponseTest
+          client:load
+          questions={questions}
+        />
+      </div>
     </div>
   </main>
   
   <Footer client:load />
+
+  <script is:inline>
+    // Define submit handler globally for the component to access
+    window.behaviourResponseSubmitHandler = async function(responses) {
+      console.log('=== onSubmit CALLED ===');
+      console.log('Responses received:', responses);
+      console.log('Number of responses:', Object.keys(responses).length);
+      
+      try {
+        console.log('Submitting Behaviour Response test...');
+        
+        const submitResponse = await fetch('/api/tests/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            testType: 'behaviour-response',
+            responses,
+          }),
+        });
+
+        console.log('Fetch response status:', submitResponse.status);
+        console.log('Fetch response ok:', submitResponse.ok);
+
+        let data;
+        try {
+          const responseText = await submitResponse.text();
+          console.log('Raw response text:', responseText);
+          data = JSON.parse(responseText);
+        } catch (e) {
+          console.error('Failed to parse response JSON:', e);
+          throw new Error(`HTTP ${submitResponse.status}: ${submitResponse.statusText}`);
+        }
+
+        console.log('API Response Data:', data);
+        console.log('Score in response:', data.score);
+
+        if (!submitResponse.ok) {
+          console.error('API Error Response:', data);
+          throw new Error(data.error || 'Failed to submit test');
+        }
+
+        // Log test results with detailed attribute breakdown
+        if (data.score) {
+          console.log('');
+          console.log('╔════════════════════════════════════════════════════════╗');
+          console.log('║     BEHAVIOUR RESPONSE TEST RESULTS                    ║');
+          console.log('╠════════════════════════════════════════════════════════╣');
+          console.log('║ Total Questions:     ', String(data.score.totalQuestions || 0).padEnd(30), '║');
+          console.log('║ Answered Questions:  ', String(data.score.answeredQuestions || 0).padEnd(30), '║');
+          console.log('╠════════════════════════════════════════════════════════╣');
+          if (data.score.scores) {
+            console.log('║ ATTRIBUTE SCORES:                                      ║');
+            console.log('╠════════════════════════════════════════════════════════╣');
+            console.log('║ Ao (Autonomy/Originality):     ', String(data.score.scores.Ao || 0).padEnd(25), '║');
+            console.log('║ DI (Determination/Imagination):', String(data.score.scores.DI || 0).padEnd(25), '║');
+            console.log('║ Inq (Inquiry/Independence):    ', String(data.score.scores.Inq || 0).padEnd(25), '║');
+            console.log('║ Aa (Achievement/Acceptance):    ', String(data.score.scores.Aa || 0).padEnd(25), '║');
+            console.log('║ Sc (Self-Confidence/Social):    ', String(data.score.scores.Sc || 0).padEnd(25), '║');
+          }
+          console.log('╠════════════════════════════════════════════════════════╣');
+          console.log('║ Full Score Object:                                    ║');
+          console.log('╚════════════════════════════════════════════════════════╝');
+          console.log(JSON.stringify(data.score, null, 2));
+          console.log('');
+        } else {
+          console.warn('No score data in response:', data);
+        }
+
+        // Show success message briefly
+        alert('Test submitted successfully!');
+        window.location.href = '/dashboard';
+      } catch (err) {
+        console.error('=== ERROR IN onSubmit ===');
+        console.error('Error object:', err);
+        console.error('Error message:', err.message);
+        console.error('Error stack:', err.stack);
+        console.error('Error name:', err.name);
+        throw err;
+      }
+    };
+  </script>
 </BaseLayout>
 

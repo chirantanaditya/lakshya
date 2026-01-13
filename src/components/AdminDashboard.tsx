@@ -96,12 +96,21 @@ export default function AdminDashboard() {
       setLoading(true);
       setError(null);
       const response = await fetch('/api/admin/test-details');
-      if (!response.ok) {
-        throw new Error('Failed to fetch test details');
+      
+      let data: any;
+      try {
+        data = await response.json();
+      } catch (e) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
-      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to fetch test details');
+      }
+      
       setTestDetails(data);
     } catch (err: any) {
+      console.error('Error fetching test details:', err);
       setError(err.message || 'Failed to load test details');
     } finally {
       setLoading(false);
@@ -112,13 +121,22 @@ export default function AdminDashboard() {
     try {
       setError(null);
       const response = await fetch(`/api/admin/test-details?userId=${userId}`);
-      if (!response.ok) {
-        throw new Error('Failed to fetch user details');
+      
+      let data: any;
+      try {
+        data = await response.json();
+      } catch (e) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
-      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to fetch user details');
+      }
+      
       setSelectedUser(data.user);
       setUserResponses(data.testResponses || []);
     } catch (err: any) {
+      console.error('Error fetching user details:', err);
       setError(err.message || 'Failed to load user details');
     }
   };
@@ -230,7 +248,12 @@ export default function AdminDashboard() {
         }),
       });
 
-      const data = await response.json();
+      let data: any;
+      try {
+        data = await response.json();
+      } catch (e) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
 
       if (!response.ok) {
         throw new Error(data.error || 'Failed to assign tests');
@@ -238,17 +261,21 @@ export default function AdminDashboard() {
 
       setAssignSuccess(true);
       
-      // Refresh the test details to get updated data
-      await fetchTestDetails();
-      
-      // Update the selected user
+      // Update the selected user with the returned data
       if (data.user) {
-        setSelectedUserForAssign(data.user);
+        setSelectedUserForAssign(data.user as User);
       }
+      
+      // Refresh the test details to get updated data after a short delay
+      // to ensure the database update has completed
+      setTimeout(async () => {
+        await fetchTestDetails();
+      }, 500);
       
       // Reset success message after 3 seconds
       setTimeout(() => setAssignSuccess(false), 3000);
     } catch (err: any) {
+      console.error('Error assigning tests:', err);
       setAssignError(err.message || 'Failed to assign tests');
     } finally {
       setAssignLoading(false);
@@ -274,7 +301,12 @@ export default function AdminDashboard() {
         }),
       });
 
-      const data = await response.json();
+      let data: any;
+      try {
+        data = await response.json();
+      } catch (e) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
 
       if (!response.ok) {
         throw new Error(data.error || 'Failed to send invitation');
@@ -974,7 +1006,7 @@ export default function AdminDashboard() {
                     handleSelectUserForAssign(user);
                   }
                 }}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-900 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               >
                 <option value="">-- Select a candidate --</option>
                 {testDetails?.users.map((user) => (

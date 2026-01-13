@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <!-- Circular Emblem (Left Side) -->
+  <g id="emblem">
+    <!-- Outer dashed circle -->
+    <circle cx="100" cy="100" r="95" fill="none" stroke="#4a4a4a" stroke-width="2" stroke-dasharray="4,4"/>
+    
+    <!-- Inner circle background -->
+    <circle cx="100" cy="100" r="85" fill="#f5f5f5" opacity="0.1"/>
+    
+    <!-- Text at top of circle: "Lakshya" -->
+    <text x="100" y="45" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#4a4a4a" text-anchor="middle">
+      Lakshya
+    </text>
+    
+    <!-- Text at bottom of circle: "Career Counselling" -->
+    <text x="100" y="160" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#4a4a4a" text-anchor="middle">
+      Career Counselling
+    </text>
+    
+    <!-- Handshake design in center -->
+    <!-- Red hand (left) with wing extension -->
+    <g id="red-hand">
+      <!-- Left hand -->
+      <ellipse cx="85" cy="100" rx="12" ry="18" fill="#f82c2d" transform="rotate(-15 85 100)"/>
+      <!-- Wing extension from wrist -->
+      <path d="M 75 105 Q 60 95, 50 90 Q 45 88, 40 90 Q 35 92, 32 95 Q 30 98, 35 100 Q 40 102, 45 100 Q 50 98, 55 100 Q 60 102, 65 105 Q 70 107, 75 105" 
+            fill="#f82c2d" 
+            opacity="0.9"/>
+      <path d="M 75 110 Q 65 110, 55 115 Q 50 117, 45 115 Q 40 113, 38 110 Q 40 108, 45 109 Q 50 110, 55 108 Q 60 106, 65 108 Q 70 110, 75 110" 
+            fill="#f82c2d" 
+            opacity="0.8"/>
+    </g>
+    
+    <!-- Blue hand (right) with wing extension -->
+    <g id="blue-hand">
+      <!-- Right hand -->
+      <ellipse cx="115" cy="100" rx="12" ry="18" fill="#016295" transform="rotate(15 115 100)"/>
+      <!-- Wing extension from wrist -->
+      <path d="M 125 105 Q 140 95, 150 90 Q 155 88, 160 90 Q 165 92, 168 95 Q 170 98, 165 100 Q 160 102, 155 100 Q 150 98, 145 100 Q 140 102, 135 105 Q 130 107, 125 105" 
+            fill="#016295" 
+            opacity="0.9"/>
+      <path d="M 125 110 Q 135 110, 145 115 Q 150 117, 155 115 Q 160 113, 162 110 Q 160 108, 155 109 Q 150 110, 145 108 Q 140 106, 135 108 Q 130 110, 125 110" 
+            fill="#016295" 
+            opacity="0.8"/>
+    </g>
+    
+    <!-- Connection point where hands meet -->
+    <circle cx="100" cy="100" r="3" fill="#0a98e5" opacity="0.8"/>
+  </g>
+  
+  <!-- Brand Text (Right Side) -->
+  <g id="brand-text">
+    <!-- "LAKSHYA" in large red text -->
+    <text x="220" y="90" font-family="Arial, sans-serif" font-size="48" font-weight="900" fill="#f82c2d" letter-spacing="2px">
+      LAKSHYA
+    </text>
+    
+    <!-- "Career Counselling" in blue text below -->
+    <text x="220" y="135" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="#016295" letter-spacing="1px">
+      Career Counselling
+    </text>
+  </g>
+</svg>

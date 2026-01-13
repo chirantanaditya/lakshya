@@ -5,7 +5,15 @@ export default function FooterWhite() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand Section */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Lakshaya Counselling</h3>
+            <a href="/" className="inline-block mb-4">
+              <img 
+                src="/logo-compact.svg" 
+                alt="LAKSHYA Career Counselling" 
+                className="h-10 w-auto"
+                width="200"
+                height="60"
+              />
+            </a>
             <p className="text-gray-600 mb-6 text-sm">
               Providing the guidance & counselling that takes your career to the next level.
             </p>

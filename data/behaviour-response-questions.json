@@ -1,0 +1,702 @@
+[
+  {
+    "id": "br-q1",
+    "questionNumber": 1,
+    "options": [
+      {
+        "text": "Likes to work alone",
+        "status": "Inq"
+      },
+      {
+        "text": "Prefers to work in a group",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q2",
+    "questionNumber": 2,
+    "options": [
+      {
+        "text": "Industrious",
+        "status": "DI"
+      },
+      {
+        "text": "Neat and Orderly",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q3",
+    "questionNumber": 3,
+    "options": [
+      {
+        "text": "Socially well adjusted",
+        "status": "Ao"
+      },
+      {
+        "text": "Occasionally regresses and is playful and childlike",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q4",
+    "questionNumber": 4,
+    "options": [
+      {
+        "text": "Persistent",
+        "status": "DI"
+      },
+      {
+        "text": "Does work on time",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q5",
+    "questionNumber": 5,
+    "options": [
+      {
+        "text": "Popular well-liked",
+        "status": "Inq"
+      },
+      {
+        "text": "Truthful even if it gets you into trouble",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q6",
+    "questionNumber": 6,
+    "options": [
+      {
+        "text": "Considerate of others",
+        "status": "Inq"
+      },
+      {
+        "text": "Courageous in convictions",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q7",
+    "questionNumber": 7,
+    "options": [
+      {
+        "text": "Conforming",
+        "status": "Inq"
+      },
+      {
+        "text": "Nonconforming",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q8",
+    "questionNumber": 8,
+    "options": [
+      {
+        "text": "Sophisticated",
+        "status": "None"
+      },
+      {
+        "text": "Unsophisticated",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q9",
+    "questionNumber": 9,
+    "options": [
+      {
+        "text": "Sense of humour",
+        "status": "None"
+      },
+      {
+        "text": "Talkative",
+        "status": "Sc"
+      }
+    ]
+  },
+  {
+    "id": "br-q10",
+    "questionNumber": 10,
+    "options": [
+      {
+        "text": "Visionary",
+        "status": "None"
+      },
+      {
+        "text": "Versatile",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q11",
+    "questionNumber": 11,
+    "options": [
+      {
+        "text": "Adventurous",
+        "status": "DI"
+      },
+      {
+        "text": "Does work on time",
+        "status": "Aa"
+      }
+    ]
+  },
+  {
+    "id": "br-q12",
+    "questionNumber": 12,
+    "options": [
+      {
+        "text": "Becomes absorbed in tasks",
+        "status": "None"
+      },
+      {
+        "text": "Courteous, polite",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q13",
+    "questionNumber": 13,
+    "options": [
+      {
+        "text": "Curious",
+        "status": "None"
+      },
+      {
+        "text": "Energetic",
+        "status": "Ao"
+      }
+    ]
+  },
+  {
+    "id": "br-q14",
+    "questionNumber": 14,
+    "options": [
+      {
+        "text": "Attempt dificult tasks",
+        "status": "DI"
+      },
+      {
+        "text": "Desires to excel",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q15",
+    "questionNumber": 15,
+    "options": [
+      {
+        "text": "Disturbs existing organisation and procedures",
+        "status": "None"
+      },
+      {
+        "text": "Accept the judgement of authorities",
+        "status": "Aa"
+      }
+    ]
+  },
+  {
+    "id": "br-q16",
+    "questionNumber": 16,
+    "options": [
+      {
+        "text": "A good guesser",
+        "status": "None"
+      },
+      {
+        "text": "Remembers well",
+        "status": "Ao"
+      }
+    ]
+  },
+  {
+    "id": "br-q17",
+    "questionNumber": 17,
+    "options": [
+      {
+        "text": "Quiet",
+        "status": "None"
+      },
+      {
+        "text": "Obedient",
+        "status": "Sc"
+      }
+    ]
+  },
+  {
+    "id": "br-q18",
+    "questionNumber": 18,
+    "options": [
+      {
+        "text": "Independent in judgement",
+        "status": "Inq"
+      },
+      {
+        "text": "Considerate of others",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q19",
+    "questionNumber": 19,
+    "options": [
+      {
+        "text": "Critical of others",
+        "status": "Inq"
+      },
+      {
+        "text": "Courteous, polite",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q20",
+    "questionNumber": 20,
+    "options": [
+      {
+        "text": "Feels strong emotions",
+        "status": "Sc"
+      },
+      {
+        "text": "Reserved",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q21",
+    "questionNumber": 21,
+    "options": [
+      {
+        "text": "Emotionally sensitive",
+        "status": "Ao"
+      },
+      {
+        "text": "Socially well adjusted",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q22",
+    "questionNumber": 22,
+    "options": [
+      {
+        "text": "Imaginative",
+        "status": "DI"
+      },
+      {
+        "text": "Critical",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q23",
+    "questionNumber": 23,
+    "options": [
+      {
+        "text": "Receptive to ideas of others",
+        "status": "Inq"
+      },
+      {
+        "text": "Negativistic",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q24",
+    "questionNumber": 24,
+    "options": [
+      {
+        "text": "Fault-finding",
+        "status": "Inq"
+      },
+      {
+        "text": "Popular, well-liked",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q25",
+    "questionNumber": 25,
+    "options": [
+      {
+        "text": "Determined",
+        "status": "None"
+      },
+      {
+        "text": "Obedient",
+        "status": "Aa"
+      }
+    ]
+  },
+  {
+    "id": "br-q26",
+    "questionNumber": 26,
+    "options": [
+      {
+        "text": "Intuitive",
+        "status": "None"
+      },
+      {
+        "text": "Thorough",
+        "status": "Ao"
+      }
+    ]
+  },
+  {
+    "id": "br-q27",
+    "questionNumber": 27,
+    "options": [
+      {
+        "text": "Never Bored",
+        "status": "DI"
+      },
+      {
+        "text": "Refined",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q28",
+    "questionNumber": 28,
+    "options": [
+      {
+        "text": "Haughty",
+        "status": "Inq"
+      },
+      {
+        "text": "Courteous",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q29",
+    "questionNumber": 29,
+    "options": [
+      {
+        "text": "Cautious",
+        "status": "None"
+      },
+      {
+        "text": "Willing to take risks",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q30",
+    "questionNumber": 30,
+    "options": [
+      {
+        "text": "Affectionate, loving",
+        "status": "None"
+      },
+      {
+        "text": "Courteous, polite",
+        "status": "Aa"
+      }
+    ]
+  },
+  {
+    "id": "br-q31",
+    "questionNumber": 31,
+    "options": [
+      {
+        "text": "Always asking questions",
+        "status": "Sc"
+      },
+      {
+        "text": "Quiet",
+        "status": "Aa"
+      }
+    ]
+  },
+  {
+    "id": "br-q32",
+    "questionNumber": 32,
+    "options": [
+      {
+        "text": "Competitive",
+        "status": "None"
+      },
+      {
+        "text": "Conforming",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q33",
+    "questionNumber": 33,
+    "options": [
+      {
+        "text": "Energetic",
+        "status": "DI"
+      },
+      {
+        "text": "Neat and Orderly",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q34",
+    "questionNumber": 34,
+    "options": [
+      {
+        "text": "Remembers well",
+        "status": "Ao"
+      },
+      {
+        "text": "Talkative",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q35",
+    "questionNumber": 35,
+    "options": [
+      {
+        "text": "Self-Assertive",
+        "status": "Sc"
+      },
+      {
+        "text": "Reserved",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q36",
+    "questionNumber": 36,
+    "options": [
+      {
+        "text": "Sense of beauty",
+        "status": "None"
+      },
+      {
+        "text": "Socially well adjusted",
+        "status": "Ao"
+      }
+    ]
+  },
+  {
+    "id": "br-q37",
+    "questionNumber": 37,
+    "options": [
+      {
+        "text": "Self confident",
+        "status": "None"
+      },
+      {
+        "text": "Timid",
+        "status": "Ao"
+      }
+    ]
+  },
+  {
+    "id": "br-q38",
+    "questionNumber": 38,
+    "options": [
+      {
+        "text": "Versatile",
+        "status": "None"
+      },
+      {
+        "text": "Popular, well-liked",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q39",
+    "questionNumber": 39,
+    "options": [
+      {
+        "text": "Self-sufficient",
+        "status": "None"
+      },
+      {
+        "text": "Curious",
+        "status": "Ao"
+      }
+    ]
+  },
+  {
+    "id": "br-q40",
+    "questionNumber": 40,
+    "options": [
+      {
+        "text": "Thorough",
+        "status": "DI"
+      },
+      {
+        "text": "Does work on time",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q41",
+    "questionNumber": 41,
+    "options": [
+      {
+        "text": "Eccentric",
+        "status": "Inq"
+      },
+      {
+        "text": "Socially well adjusted",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q42",
+    "questionNumber": 42,
+    "options": [
+      {
+        "text": "Self confident",
+        "status": "Ao"
+      },
+      {
+        "text": "Spirited in disagreement",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q43",
+    "questionNumber": 43,
+    "options": [
+      {
+        "text": "Spirited in disagreement",
+        "status": "None"
+      },
+      {
+        "text": "Talkative",
+        "status": "Sc"
+      }
+    ]
+  },
+  {
+    "id": "br-q44",
+    "questionNumber": 44,
+    "options": [
+      {
+        "text": "Prefers complex tasks",
+        "status": "DI"
+      },
+      {
+        "text": "Does work on time",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q45",
+    "questionNumber": 45,
+    "options": [
+      {
+        "text": "A good guesser",
+        "status": "Inq"
+      },
+      {
+        "text": "Receptive to ideas of others",
+        "status": "None"
+      }
+    ]
+  },
+  {
+    "id": "br-q46",
+    "questionNumber": 46,
+    "options": [
+      {
+        "text": "Curious",
+        "status": "None"
+      },
+      {
+        "text": "Self confident",
+        "status": "Ao"
+      }
+    ]
+  },
+  {
+    "id": "br-q47",
+    "questionNumber": 47,
+    "options": [
+      {
+        "text": "A self Starter",
+        "status": "None"
+      },
+      {
+        "text": "Obedient",
+        "status": "Aa"
+      }
+    ]
+  },
+  {
+    "id": "br-q48",
+    "questionNumber": 48,
+    "options": [
+      {
+        "text": "Intuitive",
+        "status": "None"
+      },
+      {
+        "text": "Remembers well",
+        "status": "Ao"
+      }
+    ]
+  },
+  {
+    "id": "br-q49",
+    "questionNumber": 49,
+    "options": [
+      {
+        "text": "Unwilling to accept things on mere say so",
+        "status": "None"
+      },
+      {
+        "text": "Obedient",
+        "status": "Aa"
+      }
+    ]
+  },
+  {
+    "id": "br-q50",
+    "questionNumber": 50,
+    "options": [
+      {
+        "text": "Altruistic working for the good of others",
+        "status": "None"
+      },
+      {
+        "text": "Courteous, polite",
+        "status": "None"
+      }
+    ]
+  }
+]

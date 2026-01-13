@@ -4,7 +4,7 @@
 
 1. **Install Dependencies**
    ```bash
-   npm install
+   pnpm install
    ```
 
 2. **Set Up Environment Variables**
@@ -22,16 +22,16 @@
 3. **Set Up Database**
    ```bash
    # Push schema to database
-   npm run db:push
+   pnpm run db:push
    
    # Or generate migrations
-   npm run db:generate
-   npm run db:migrate
+   pnpm run db:generate
+   pnpm run db:migrate
    ```
 
 4. **Start Development Server**
    ```bash
-   npm run dev
+   pnpm run dev
    ```
 
 ## Database Schema
@@ -105,7 +105,7 @@ import { users, blogPosts, testimonials } from '../src/db/schema';
 
 1. Build the project:
    ```bash
-   npm run build
+   pnpm run build
    ```
 
 2. Deploy to your hosting platform (Vercel, Netlify, etc.)

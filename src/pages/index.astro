@@ -22,232 +22,271 @@ const testimonialsData = await db
 >
   <NavBar client:load session={session} />
   
-  <main>
+  <main class="min-h-screen">
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-primary-500 to-primary-700 py-20 md:py-32 text-white relative">
-      <div class="absolute inset-0 opacity-10 pointer-events-none z-0">
-        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+    <header class="hero-section bg-gradient-to-br from-primary-500 to-primary-700 text-white relative overflow-hidden py-20 md:py-32">
+      <!-- Decorative circles -->
+      <div class="absolute inset-0 pointer-events-none z-0">
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 right-1/3 w-48 h-48 bg-white/10 rounded-full blur-2xl"></div>
       </div>
-      <div class="container mx-auto px-4 relative z-10">
-        <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-5xl md:text-6xl font-bold mb-6">
-            Get guided towards the right choice
-          </h1>
-          <p class="text-xl md:text-2xl mb-8 text-primary-100">
-            We provide guidance & counselling that takes your career to the next level
-          </p>
+      
+      <div class="container-large container mx-auto px-4 relative z-10">
+        <div class="hero-wrapper flex flex-col md:flex-row items-center gap-12 max-w-7xl mx-auto">
+          <div class="hero-text-wrapper flex-1 text-center md:text-left">
+            <div class="hero-heading-wrapper mb-8">
+              <h1 class="heading-xxlarge hero-heading text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                Get guided towards the right choice
+              </h1>
+            </div>
+            <div class="hero_para-wrapper mb-8">
+              <p class="hero-para text-xl md:text-2xl text-primary-100 leading-relaxed">
+                We provide guidance & counselling that takes your career to the next level
+              </p>
+            </div>
+            <div class="hero-button-wrapper">
+              <a 
+                href="https://tidycal.com/suresh1/about-lakshya-counselling" 
+                target="_blank"
+                class="button inline-block px-8 py-4 bg-accent-red text-white rounded-4xl hover:bg-red-600 transition-all hover:scale-105 font-semibold text-lg shadow-lg"
+              >
+                Speak with us
+              </a>
+            </div>
+          </div>
+          <!-- Hero Creative - Decorative Circles -->
+          <div class="hero-creative main hidden md:block relative w-full md:w-1/2 h-96">
+            <div class="absolute top-0 left-0 w-32 h-32 bg-white/20 rounded-full blur-xl animate-pulse"></div>
+            <div class="absolute top-1/4 right-1/4 w-48 h-48 bg-white/15 rounded-full blur-2xl animate-pulse delay-75"></div>
+            <div class="absolute bottom-1/4 left-1/3 w-40 h-40 bg-white/20 rounded-full blur-xl animate-pulse delay-150"></div>
+            <div class="absolute bottom-0 right-0 w-56 h-56 bg-white/10 rounded-full blur-3xl animate-pulse delay-200"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Text Section - 360 degrees view -->
+    <section class="text-section bg-primary-700 py-16 md:py-20">
+      <div class="page-padding px-4">
+        <div class="container-large container mx-auto max-w-6xl">
+          <div id="heading-container" class="sub-heading-container">
+            <h2 class="heading-large text-3xl md:text-4xl lg:text-5xl font-light text-white leading-relaxed">
+              Get a holistic assessment that gives you a <span class="bold font-bold">360 degrees</span> view of your <span class="bold font-bold">potential</span> and <span class="bold font-bold">personality</span>.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How we help? Section -->
+    <section class="section py-20 bg-white">
+      <div class="page-padding px-4">
+        <div class="container-large container mx-auto max-w-7xl">
+          <div class="_3-feature-container">
+            <div class="feature_title-wrapper mb-16">
+              <h2 class="heading-xlarge align-center text-4xl md:text-5xl font-semibold text-center text-black">
+                How we help?
+              </h2>
+            </div>
+            <div class="features-grid grid md:grid-cols-3 gap-8 lg:gap-12">
+              <!-- Comprehensive Analysis -->
+              <div class="feature-card bg-white p-8 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="icon-1x1-large w-20 h-20 mb-6 bg-primary-100 rounded-lg flex items-center justify-center">
+                  <svg class="w-12 h-12 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">Comprehensive Analysis</h3>
+                <div class="text-size-medium text-gray-600 leading-relaxed">
+                  Understand your aptitude level, personality type, and area of interest which are integral components in shaping your professional identity.
+                </div>
+              </div>
+              
+              <!-- Personalized Counseling -->
+              <div class="feature-card bg-white p-8 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="icon-1x1-large w-20 h-20 mb-6 bg-primary-100 rounded-lg flex items-center justify-center">
+                  <svg class="w-12 h-12 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">Personalized Counseling</h3>
+                <div class="text-size-medium text-gray-600 leading-relaxed">
+                  Get one-on-one guidance tailored to your specific needs from our team of experienced counselors
+                </div>
+              </div>
+              
+              <!-- In-Depth Report -->
+              <div class="feature-card bg-white p-8 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="icon-1x1-large w-20 h-20 mb-6 bg-primary-100 rounded-lg flex items-center justify-center">
+                  <svg class="w-12 h-12 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">In-Depth Report</h3>
+                <div class="text-size-medium text-gray-600 leading-relaxed">
+                  Gain insights into the comprehensive overview of suggested career paths and potential opportunities.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our tests are designed for Section -->
+    <section class="category-section py-20 bg-white">
+      <div class="container-large container mx-auto px-4 max-w-7xl">
+        <div class="heading-container mb-16">
+          <h2 class="heading-large mob-ile-center text-3xl md:text-4xl lg:text-5xl font-semibold text-black text-center md:text-left">
+            Our tests are designed for
+          </h2>
+        </div>
+        <div class="category-container grid md:grid-cols-2 gap-6 lg:gap-8">
+          <!-- High School Students -->
+          <a href="/high-school-students" class="category-item-container group relative block rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+            <div class="category-item-wrapper bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-primary-500 transition-colors">
+              <div class="flex items-start gap-6">
+                <div class="circle hss rounded-full w-16 h-16 bg-gradient-to-br from-accent-orange to-orange-600 flex-shrink-0 flex items-center justify-center">
+                  <span class="text-white font-bold text-xl">H</span>
+                </div>
+                <div class="category-detail-wrapper flex-1">
+                  <h3 class="category-item-heading no-wrap text-2xl font-semibold text-black mb-3 group-hover:text-primary-600 transition-colors">
+                    High School Students
+                  </h3>
+                  <p class="category-item-desc text-lg text-gray-700 leading-relaxed">
+                    Students in their 9th and 10th standard, contemplating selecting the appropriate institution for their high school education.
+                  </p>
+                </div>
+                <svg class="w-8 h-8 text-primary-500 group-hover:translate-x-2 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+            <!-- Background blur effect -->
+            <div class="bg-blur-container absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+              <div class="bg-circle category hss absolute inset-0 bg-accent-orange/20 blur-3xl rounded-full"></div>
+            </div>
+          </a>
           
-          <a 
-            href="https://tidycal.com/suresh1/about-lakshya-counselling" 
-            class="inline-block px-8 py-4 bg-accent-red text-white rounded-4xl hover:bg-red-600 transition-colors font-medium text-lg"
-          >
-            Speak with us
+          <!-- Senior School Students -->
+          <a href="/senior-school-students" class="category-item-container group relative block rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+            <div class="category-item-wrapper bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-primary-500 transition-colors">
+              <div class="flex items-start gap-6">
+                <div class="circle sss rounded-full w-16 h-16 bg-gradient-to-br from-accent-yellow to-yellow-600 flex-shrink-0 flex items-center justify-center">
+                  <span class="text-white font-bold text-xl">S</span>
+                </div>
+                <div class="category-detail-wrapper flex-1">
+                  <h4 class="category-item-heading no-wrap text-2xl font-semibold text-black mb-3 group-hover:text-primary-600 transition-colors">
+                    Senior School Students
+                  </h4>
+                  <p class="category-item-desc text-lg text-gray-700 leading-relaxed">
+                    Students in the midst of picking their streams for their senior school years, who are confused and hesitant about this decisive choice.
+                  </p>
+                </div>
+                <svg class="w-8 h-8 text-primary-500 group-hover:translate-x-2 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+            <div class="bg-blur-container absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+              <div class="bg-circle category sss absolute inset-0 bg-accent-yellow/20 blur-3xl rounded-full"></div>
+            </div>
+          </a>
+          
+          <!-- College Students -->
+          <a href="/college-student" class="category-item-container group relative block rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+            <div class="category-item-wrapper bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-primary-500 transition-colors">
+              <div class="flex items-start gap-6">
+                <div class="circle cs rounded-full w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 flex-shrink-0 flex items-center justify-center">
+                  <span class="text-white font-bold text-xl">C</span>
+                </div>
+                <div class="category-detail-wrapper flex-1">
+                  <h4 class="category-item-heading no-wrap text-2xl font-semibold text-black mb-3 group-hover:text-primary-600 transition-colors">
+                    College Students
+                  </h4>
+                  <p class="category-item-desc text-lg text-gray-700 leading-relaxed">
+                    Students exploring their future studying options who are unclear and muddled by the number of possibilities available.
+                  </p>
+                </div>
+                <svg class="w-8 h-8 text-primary-500 group-hover:translate-x-2 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+            <div class="bg-blur-container absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+              <div class="bg-circle category absolute inset-0 bg-primary-500/20 blur-3xl rounded-full"></div>
+            </div>
+          </a>
+          
+          <!-- Corporate Professional -->
+          <a href="/corporate-professional" class="category-item-container group relative block rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+            <div class="category-item-wrapper bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-primary-500 transition-colors">
+              <div class="flex items-start gap-6">
+                <div class="circle cp rounded-full w-16 h-16 bg-gradient-to-br from-accent-green to-green-600 flex-shrink-0 flex items-center justify-center">
+                  <span class="text-white font-bold text-xl">P</span>
+                </div>
+                <div class="category-detail-wrapper flex-1">
+                  <h4 class="category-item-heading no-wrap text-2xl font-semibold text-black mb-3 group-hover:text-primary-600 transition-colors">
+                    Corporate Professional
+                  </h4>
+                  <p class="category-item-desc text-lg text-gray-700 leading-relaxed">
+                    Corporate professionals who are in search of a role that best suits their acquired skills and an environment that compliments their desires.
+                  </p>
+                </div>
+                <svg class="w-8 h-8 text-primary-500 group-hover:translate-x-2 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+            <div class="bg-blur-container absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+              <div class="bg-circle category cp absolute inset-0 bg-accent-green/20 blur-3xl rounded-full"></div>
+            </div>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Dark Blue Section -->
-    <section class="bg-primary-700 py-20">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="text-4xl md:text-5xl font-light text-white leading-relaxed">
-            Get a holistic assessment that gives you a <span class="font-bold">360 degrees</span> view of your <span class="font-bold">potential</span> and <span class="font-bold">personality</span>.
-          </h2>
-        </div>
-      </div>
-    </section>
-
-    <!-- How we help? -->
-    <section class="py-20 bg-white">
-      <div class="container mx-auto px-4">
-        <h2 class="text-4xl md:text-5xl font-semibold text-center text-black mb-16">
-          How we help?
-        </h2>
-        
-        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div class="bg-white p-8 rounded-lg">
-            <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
-              <svg class="w-8 h-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">Comprehensive Analysis</h3>
-            <p class="text-gray-600">
-              Understand your aptitude level, personality type, and area of interest which are integral components in shaping your professional identity.
-            </p>
-          </div>
-          
-          <div class="bg-white p-8 rounded-lg">
-            <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
-              <svg class="w-8 h-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">Personalized Counseling</h3>
-            <p class="text-gray-600">
-              Get one-on-one guidance tailored to your specific needs from our team of experienced counselors
-            </p>
-          </div>
-          
-          <div class="bg-white p-8 rounded-lg">
-            <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
-              <svg class="w-8 h-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">In-Depth Report</h3>
-            <p class="text-gray-600">
-              Gain insights into the comprehensive overview of suggested career paths and potential opportunities.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why enroll with us? -->
-    <section class="py-20 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="text-4xl md:text-5xl font-semibold text-gray-900 mb-4">
-            Why enroll with us?
-          </h2>
-          <p class="text-xl text-gray-600 mb-12">
-            We offer holistic assessment that gives you a 360 degrees view of your potential and personality.
-          </p>
-          
-          <div class="grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-4">Personalized Approach</h3>
-              <p class="text-gray-600">
-                Our expert counsellors take the time to understand your academic history, interests, and goals, ensuring that every piece of advice is custom-fit for you.
-              </p>
-            </div>
-            
-            <div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-4">Comprehensive Assessments</h3>
-              <p class="text-gray-600">
-                Our range of assessments dives deep into your learning style, aptitudes, and preferences. By understanding how you learn best, we can recommend study strategies and educational pathways that suit your unique needs.
-              </p>
-            </div>
-            
-            <div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-4">Academic Planning</h3>
-              <p class="text-gray-600">
-                From course selection and study schedules to time management techniques, we equip you with the tools to thrive academically. Our guidance extends beyond textbooks, helping you embrace effective learning practices.
-              </p>
+    <!-- We care. We listen. We answer. Section -->
+    <section class="why-section py-20 bg-gray-50">
+      <div class="page-padding px-4">
+        <div class="container-large container mx-auto max-w-6xl">
+          <div class="heading-container bottom-padding mb-16">
+            <div class="slicky-top-wrapper">
+              <h2 class="heading-large why text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6 leading-tight">
+                We care. <br />
+                We listen. <br />
+                We answer.
+              </h2>
+              <div class="sub-heading-container _2">
+                <p class="text-subheading text-xl text-gray-600 leading-relaxed">
+                  Unlike your schools and corporate office, we want to understand your personality rather than keep a score.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our tests are designed for -->
-    <section class="py-20 bg-white">
-      <div class="container mx-auto px-4">
-        <h2 class="text-4xl md:text-5xl font-semibold text-black mb-16">
-          Our tests are designed for
-        </h2>
-        
-        <div class="space-y-8 max-w-5xl">
-          <!-- High School Students -->
-          <div class="flex items-start gap-6">
-            <div class="w-12 h-12 rounded-full bg-accent-orange flex-shrink-0"></div>
-            <div class="flex-1">
-              <h3 class="text-2xl font-semibold text-black mb-2">High School Students</h3>
-              <p class="text-lg text-black">
-                Students in their 9th and 10th standard, contemplating selecting the appropriate institution for their high school education.
-              </p>
-            </div>
-            <a href="/high-school-students" class="text-primary-500 hover:text-primary-600">
-              <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-          
-          <!-- Senior School Students -->
-          <div class="flex items-start gap-6">
-            <div class="w-12 h-12 rounded-full bg-accent-orange flex-shrink-0"></div>
-            <div class="flex-1">
-              <h3 class="text-2xl font-semibold text-black mb-2">Senior School Students</h3>
-              <p class="text-lg text-black">
-                Students in the midst of picking their streams for their senior school years, who are confused and hesitant about this decisive choice.
-              </p>
-            </div>
-            <a href="/senior-school-students" class="text-primary-500 hover:text-primary-600">
-              <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-          
-          <!-- College Students -->
-          <div class="flex items-start gap-6">
-            <div class="w-12 h-12 rounded-full bg-accent-orange flex-shrink-0"></div>
-            <div class="flex-1">
-              <h3 class="text-2xl font-semibold text-black mb-2">College Students</h3>
-              <p class="text-lg text-black">
-                Students exploring their future studying options who are unclear and muddled by the number of possibilities available.
-              </p>
-            </div>
-            <a href="/college-student" class="text-primary-500 hover:text-primary-600">
-              <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-          
-          <!-- Corporate Professional -->
-          <div class="flex items-start gap-6">
-            <div class="w-12 h-12 rounded-full bg-accent-orange flex-shrink-0"></div>
-            <div class="flex-1">
-              <h3 class="text-2xl font-semibold text-black mb-2">Corporate Professional</h3>
-              <p class="text-lg text-black">
-                Corporate professionals who are in search of a role that best suits their acquired skills and an environment that compliments their desires.
-              </p>
-            </div>
-            <a href="/corporate-professional" class="text-primary-500 hover:text-primary-600">
-              <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- We care. We listen. We answer. -->
-    <section class="py-20 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="text-4xl md:text-5xl font-semibold text-gray-900 mb-4">
-            We care. <br />
-            We listen. <br />
-            We answer.
-          </h2>
-          <p class="text-xl text-gray-600 mb-12">
-            Unlike your schools and corporate office, we want to understand your personality rather than keep a score.
-          </p>
-          
-          <div class="grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-4">Clarity on Future</h3>
-              <p class="text-gray-600">
+          <div class="container-large section-sub">
+            <div class="why-sub-wrapper mb-12 md:mb-8">
+              <h3 class="heading-medium mobile-center sub-head text-2xl font-semibold text-gray-900 mb-4 text-center md:text-left">
+                Clarity on Future
+              </h3>
+              <p class="why-sub-para text-gray-600 leading-relaxed">
                 Lakshaya aims to provide you with the best options and clarity to build your foundation on. Our career counselors go through the results of your career assessment with you, validate the report outcomes with real-life examples, and accordingly recommend career paths.
               </p>
             </div>
-            
-            <div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-4">Develop Efficiency & Motivation</h3>
-              <p class="text-gray-600">
+            <div class="why-sub-wrapper mb-12 md:mb-8">
+              <h3 class="heading-medium mobile-center sub-head text-2xl font-semibold text-gray-900 mb-4 text-center md:text-left">
+                Develop Efficiency & Motivation
+              </h3>
+              <p class="why-sub-para text-gray-600 leading-relaxed">
                 Develop and spark high levels of efficiency and motivation within yourself using the best kind of help. With the right kind of motivation and efficiency you will find yourself at a better position to utilize your skills productively.
               </p>
             </div>
-            
-            <div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-4">Experienced Psychologists & Counselors</h3>
-              <p class="text-gray-600">
+            <div class="why-sub-wrapper">
+              <h3 class="heading-medium mobile-center sub-head text-2xl font-semibold text-gray-900 mb-4 text-center md:text-left">
+                Experienced Psychologists & Counselors
+              </h3>
+              <p class="why-sub-para text-gray-600 leading-relaxed">
                 We do not rely on scores and figures to tell us about you. Our team of experienced career counselors care tremendously to understand you completely and help you in your journey.
               </p>
             </div>
@@ -256,17 +295,17 @@ const testimonialsData = await db
       </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Testimonials Section -->
     {testimonialsData.length > 0 && (
-      <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-          <h2 class="text-4xl md:text-5xl font-semibold text-black mb-16 text-center">
-            Lakshya Counselling has added value to many
-          </h2>
-          
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <section class="testimonial-section py-20 bg-white overflow-hidden">
+        <div class="testimonial-container container mx-auto px-4 max-w-7xl">
+          <div class="heading-container testimonial mb-16">
+            <h2 class="heading-large testimonial text-3xl md:text-4xl lg:text-5xl font-semibold text-black text-center">
+              Lakshya Counselling has added value to many
+            </h2>
+          </div>
+          <div class="testimonials-grid grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {testimonialsData.map((testimonial, index) => {
-              // Cycle through border colors
               const borderColors = [
                 'border-primary-500',
                 'border-accent-yellow',
@@ -278,18 +317,20 @@ const testimonialsData = await db
               const borderColor = borderColors[index % borderColors.length];
               
               return (
-                <div class={`border-2 ${borderColor} rounded-3xl p-6`}>
-                  <p class="text-lg text-black mb-6">
-                    {testimonial.testimonialText}
+                <div class={`testimonial-card border-2 ${borderColor} rounded-3xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}>
+                  <p class="testimonial-text text-base text-black mb-6 leading-relaxed">
+                    {testimonial.testimonialText || ''}
                   </p>
-                  <p class="font-bold text-lg text-black mb-1">
-                    {testimonial.authorName || testimonial.name}
-                  </p>
-                  <p class="text-sm text-black opacity-70">
-                    {testimonial.authorTitle && testimonial.authorLocation 
-                      ? `${testimonial.authorTitle}, ${testimonial.authorLocation}`
-                      : testimonial.authorTitle || testimonial.authorLocation || ''}
-                  </p>
+                  <div class="testimonial-name-wrapper">
+                    <div class="testimonial-name text-size-medium font-bold text-black mb-1">
+                      {testimonial.authorName || testimonial.name || ''}
+                    </div>
+                    <div class="testimonial-name text-gray-600">
+                      {testimonial.authorTitle && testimonial.authorLocation 
+                        ? `${testimonial.authorTitle}, ${testimonial.authorLocation}`
+                        : testimonial.authorTitle || testimonial.authorLocation || ''}
+                    </div>
+                  </div>
                 </div>
               );
             })}
@@ -299,25 +340,63 @@ const testimonialsData = await db
     )}
 
     <!-- CTA Section -->
-    <section class="bg-primary-700 py-20 text-white relative">
-      <div class="absolute inset-0 opacity-10 pointer-events-none z-0">
-        <div class="absolute inset-0 bg-gradient-to-br from-primary-500 to-primary-600"></div>
-      </div>
-      <div class="container mx-auto px-4 relative z-10">
-        <div class="max-w-4xl mx-auto text-center">
-          <h2 class="text-4xl md:text-5xl font-bold mb-8">Make the right choice for your future</h2>
-          
-          <a 
-            href="https://tidycal.com/suresh1/about-lakshya-counselling" 
-            class="inline-block px-8 py-4 bg-white text-primary-600 rounded-4xl hover:bg-primary-50 transition-colors font-medium text-lg relative z-20"
-          >
-            Get a Free Consultation
-          </a>
+    <div class="cta-section relative bg-primary-700 py-20 md:py-32 text-white overflow-hidden">
+      <!-- Background gradient - can be replaced with university.webp image when available -->
+      <div class="absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800"></div>
+      
+      <div class="container-large container mx-auto px-4 relative z-10">
+        <div class="cta-container max-w-5xl mx-auto text-center">
+          <div class="cta-wrapper">
+            <div class="cta-details">
+              <div class="heading-container _2 mb-8">
+                <h2 class="heading-large mobile-1 text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                  Make the right choice for your future
+                </h2>
+              </div>
+              <div class="button-wrapper">
+                <a 
+                  href="https://tidycal.com/suresh1/about-lakshya-counselling" 
+                  target="_blank"
+                  class="button inline-block px-10 py-5 bg-white text-primary-600 rounded-4xl hover:bg-primary-50 transition-all hover:scale-105 font-semibold text-lg shadow-xl"
+                >
+                  Get a Free Consultation
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   </main>
   
   <FooterGreen client:load />
   <FooterWhite client:load />
 </BaseLayout>
+
+<style>
+  /* Animations for decorative circles */
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .animate-pulse {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .delay-75 {
+    animation-delay: 0.75s;
+  }
+
+  .delay-150 {
+    animation-delay: 1.5s;
+  }
+
+  .delay-200 {
+    animation-delay: 2s;
+  }
+</style>

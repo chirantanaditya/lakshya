@@ -6,7 +6,7 @@
  * - Blog posts from Webflow CMS
  * - Page content from Webflow pages
  * 
- * Run with: npx tsx scripts/migrate-webflow-content.ts
+ * Run with: pnpx tsx scripts/migrate-webflow-content.ts
  */
 
 import { db } from '../src/db/index';

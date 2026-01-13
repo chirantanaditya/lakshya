@@ -61,7 +61,7 @@ WEBFLOW_SITE_API_TOKEN=your_actual_token_here
 After adding your real token, test it:
 
 ```powershell
-npm run webflow:devlink -- sync
+pnpm run webflow:devlink -- sync
 ```
 
 If successful, you'll see:
@@ -100,7 +100,7 @@ If successful, you'll see:
 If you don't want to use `.env`, you can pass the token directly (but this is less secure):
 
 ```powershell
-npm run webflow:devlink -- sync --site 694a5fcda87a03f212873d78 --api-token YOUR_REAL_TOKEN_HERE
+pnpm run webflow:devlink -- sync --site 694a5fcda87a03f212873d78 --api-token YOUR_REAL_TOKEN_HERE
 ```
 
 But using `.env` is much better for security!

@@ -26,15 +26,14 @@ export default function NavBar({ session, registerButtonText = "Register" }: Nav
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <nav className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-3">
-          <div className="relative w-12 h-12">
-            <div className="absolute inset-0 rounded-full bg-primary-500 opacity-30"></div>
-            <div className="absolute inset-2 rounded-full bg-primary-400 opacity-50"></div>
-          </div>
-          <div className="text-xl font-bold text-black">
-            <div>Lakshaya</div>
-            <div>Counselling</div>
-          </div>
+        <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <img 
+            src="/logo-compact.svg" 
+            alt="LAKSHYA Career Counselling" 
+            className="h-12 w-auto"
+            width="200"
+            height="60"
+          />
         </a>
         
         {/* Desktop Navigation */}

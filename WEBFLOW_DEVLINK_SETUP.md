@@ -47,10 +47,10 @@ Once configured, you can sync components:
 
 ```powershell
 # Sync all components
-npm run webflow:devlink -- sync
+pnpm run webflow:devlink -- sync
 
 # Sync specific components
-npm run webflow:devlink -- sync component-name-1 component-name-2
+pnpm run webflow:devlink -- sync component-name-1 component-name-2
 ```
 
 ## Alternative: Pass as Arguments
@@ -58,14 +58,14 @@ npm run webflow:devlink -- sync component-name-1 component-name-2
 If you prefer not to use environment variables, you can pass them as arguments:
 
 ```powershell
-npm run webflow:devlink -- sync --site 694a5fcda87a03f212873d78 --api-token your_token_here
+pnpm run webflow:devlink -- sync --site 694a5fcda87a03f212873d78 --api-token your_token_here
 ```
 
 ## Available Commands
 
 ### Sync Components
 ```powershell
-npm run webflow:devlink -- sync
+pnpm run webflow:devlink -- sync
 ```
 
 This will:
@@ -76,7 +76,7 @@ This will:
 
 ### Sync Specific Components
 ```powershell
-npm run webflow:devlink -- sync nav-bar footer-white footer-green
+pnpm run webflow:devlink -- sync nav-bar footer-white footer-green
 ```
 
 ## Your Current Configuration
@@ -106,7 +106,7 @@ Your `webflow.json` is already set up:
 ## Next Steps
 
 1. Add the environment variables to your `.env` file
-2. Run `npm run webflow:devlink -- sync` to download components
+2. Run `pnpm run webflow:devlink -- sync` to download components
 3. Components will be available in the `./devlink` directory
 4. Import and use them in your Astro/React components
 

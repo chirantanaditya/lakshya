@@ -57,7 +57,7 @@ The following content was extracted from the Webflow homepage:
 ### 1. Run the Migration Script
 
 ```bash
-npm run migrate:webflow
+pnpm run migrate:webflow
 ```
 
 This will:
@@ -70,7 +70,7 @@ This will:
 Check the database to ensure testimonials were inserted:
 
 ```bash
-npm run db:studio
+pnpm run db:studio
 ```
 
 Navigate to the `testimonials` table to see the migrated data.

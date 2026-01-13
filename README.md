@@ -32,14 +32,14 @@ A career counselling platform built with Astro, React, and Neon DB, migrated fro
 
 - Node.js 18+ 
 - A Neon database account
-- npm or yarn
+- pnpm
 
 ### Installation
 
 1. Clone the repository
 2. Install dependencies:
    ```bash
-   npm install
+   pnpm install
    ```
 
 3. Set up environment variables:
@@ -60,12 +60,12 @@ A career counselling platform built with Astro, React, and Neon DB, migrated fro
 
 4. Run database migrations:
    ```bash
-   npm run db:push
+   pnpm run db:push
    ```
 
 5. Start the development server:
    ```bash
-   npm run dev
+   pnpm run dev
    ```
 
 6. Open [http://localhost:4321](http://localhost:4321)
@@ -109,12 +109,12 @@ src/
 
 ## Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run db:generate` - Generate database migrations
-- `npm run db:push` - Push schema to database
-- `npm run db:studio` - Open Drizzle Studio
+- `pnpm run dev` - Start development server
+- `pnpm run build` - Build for production
+- `pnpm run preview` - Preview production build
+- `pnpm run db:generate` - Generate database migrations
+- `pnpm run db:push` - Push schema to database
+- `pnpm run db:studio` - Open Drizzle Studio
 
 ## Environment Variables
 

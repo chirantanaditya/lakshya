@@ -1,4 +1,7 @@
 ignoredBuiltDependencies:
+  - '@prisma/engines'
+  - '@sentry/cli'
   - esbuild
   - msw
+  - prisma
   - sharp

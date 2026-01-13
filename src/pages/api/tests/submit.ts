@@ -5,22 +5,34 @@ import { userTestResponses, users } from '../../../db/schema';
 import { eq } from 'drizzle-orm';
 import { gradeGATBTest } from '../../../lib/grading';
 import { calculateWorkValuesScore } from '../../../lib/work-values-scoring';
+import { calculateBehaviourResponseScore } from '../../../lib/behaviour-response-scoring';
 
 export const POST: APIRoute = async ({ request, cookies }) => {
   try {
+    console.log('=== Test Submission API Called ===');
     const session = await getSession(cookies);
     
     if (!session) {
+      console.error('Unauthorized: No session found');
       return new Response(
         JSON.stringify({ error: 'Unauthorized' }),
         { status: 401, headers: { 'Content-Type': 'application/json' } }
       );
     }
 
+    console.log('Session found for user:', session.userId);
     const body = await request.json();
     const { testType, responses, matches, part } = body;
+    
+    console.log('Request body:', {
+      testType,
+      responsesCount: responses ? Object.keys(responses).length : 0,
+      matches,
+      part
+    });
 
     if (!testType) {
+      console.error('Test type is missing');
       return new Response(
         JSON.stringify({ error: 'Test type is required' }),
         { status: 400, headers: { 'Content-Type': 'application/json' } }
@@ -67,6 +79,23 @@ export const POST: APIRoute = async ({ request, cookies }) => {
           // Continue without scoring if scoring fails
         }
       }
+      
+      // Calculate Behaviour Response scores
+      if (testType === 'behaviour-response') {
+        try {
+          console.log('Calculating Behaviour Response scores...');
+          console.log('Responses received:', Object.keys(responses).length);
+          scoreResult = await calculateBehaviourResponseScore(responses);
+          console.log('Behaviour Response Score Result:', JSON.stringify(scoreResult, null, 2));
+        } catch (error: any) {
+          console.error('Behaviour Response scoring error:', error);
+          console.error('Scoring error details:', {
+            message: error.message,
+            stack: error.stack
+          });
+          // Continue without scoring if scoring fails
+        }
+      }
     } else {
       return new Response(
         JSON.stringify({ error: 'Responses or matches are required' }),
@@ -110,6 +139,10 @@ export const POST: APIRoute = async ({ request, cookies }) => {
         .where(eq(users.id, session.userId));
     }
 
+    console.log('Test submission successful');
+    console.log('Test Type:', testType);
+    console.log('Score Result:', JSON.stringify(scoreResult, null, 2));
+    
     return new Response(
       JSON.stringify({ 
         success: true, 
