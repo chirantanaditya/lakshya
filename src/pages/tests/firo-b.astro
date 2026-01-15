@@ -24,8 +24,24 @@ if (user.firoBStatus === 'Completed') {
   return Astro.redirect('/dashboard');
 }
 
+type FiroBOption = { text: string; status: string };
+type FiroBQuestion = { id: string; questionNumber: number; questionText: string; options: FiroBOption[] };
+
+const normalizeOptions = (options: any[]): FiroBOption[] =>
+  (options || [])
+    .map((option: any) => {
+      if (typeof option === 'string') {
+        return { text: option, status: 'none' };
+      }
+      return {
+        text: option?.text || '',
+        status: option?.status || 'none',
+      };
+    })
+    .filter((option: FiroBOption) => option.text);
+
 // Load questions from JSON file
-let questions: Array<{ id: string; questionNumber: number; questionText: string; options: string[] }> = [];
+let questions: FiroBQuestion[] = [];
 try {
   const jsonPath = join(process.cwd(), 'data', 'firo-b-questions.json');
   const fileContent = readFileSync(jsonPath, 'utf-8');
@@ -35,7 +51,7 @@ try {
     id: q.id || `firob-q${q.questionNumber}`,
     questionNumber: q.questionNumber,
     questionText: q.questionText,
-    options: q.options || [],
+    options: normalizeOptions(q.options),
   }));
 } catch (error: any) {
   console.error('Error loading Firo-B questions:', error);
@@ -51,7 +67,7 @@ try {
     id: q.id,
     questionNumber: parseInt(q.questionNumber || String(index + 1)) || index + 1,
     questionText: q.questionText || '',
-    options: (q.options as string[]) || [],
+    options: normalizeOptions(q.options as any[]),
   }));
 }
 ---

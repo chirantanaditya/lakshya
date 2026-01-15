@@ -1,26 +1,31 @@
 import { useState } from 'react';
 
+interface FiroBOption {
+  text: string;
+  status: string;
+}
+
 interface FiroBQuestion {
   id: string;
   questionNumber: number;
   questionText: string;
-  options: string[];
+  options: FiroBOption[];
 }
 
 interface FiroBTestProps {
   questions: FiroBQuestion[];
-  onSubmit?: (responses: Record<string, string>) => Promise<void>;
+  onSubmit?: (responses: Record<string, FiroBOption>) => Promise<void>;
 }
 
 export default function FiroBTest({
   questions,
   onSubmit,
 }: FiroBTestProps) {
-  const [responses, setResponses] = useState<Record<string, string>>({});
+  const [responses, setResponses] = useState<Record<string, FiroBOption>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleAnswerSelect = (questionId: string, answer: string) => {
+  const handleAnswerSelect = (questionId: string, answer: FiroBOption) => {
     setResponses((prev) => ({
       ...prev,
       [questionId]: answer,
@@ -48,7 +53,7 @@ export default function FiroBTest({
     setError(null);
 
     try {
-      const submitHandler = onSubmit || (async (responses: Record<string, string>) => {
+      const submitHandler = onSubmit || (async (responses: Record<string, FiroBOption>) => {
         const response = await fetch('/api/tests/submit', {
           method: 'POST',
           headers: {
@@ -130,16 +135,16 @@ export default function FiroBTest({
                   <div className="flex flex-wrap gap-2">
                     {question.options.map((option, optIndex) => (
                       <button
-                        key={optIndex}
+                        key={`${question.id}-${optIndex}`}
                         type="button"
                         onClick={() => handleAnswerSelect(question.id, option)}
                         className={`px-5 py-2.5 rounded-lg border font-medium text-sm transition-all ${
-                          selectedAnswer === option
+                          selectedAnswer?.text === option.text
                             ? 'border-gray-900 bg-gray-900 text-white shadow-sm'
                             : 'border-gray-300 bg-white text-gray-900 hover:border-gray-400 hover:bg-gray-50'
                         }`}
                       >
-                        {option}
+                        {option.text}
                       </button>
                     ))}
                   </div>

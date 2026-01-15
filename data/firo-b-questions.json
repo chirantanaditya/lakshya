@@ -3,324 +3,1674 @@
     "id": "firob-q1",
     "questionNumber": 1,
     "questionText": "I try to be with people.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Often",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Sometimes",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q2",
     "questionNumber": 2,
     "questionText": "I let other people decide what to do.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Often",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Sometimes",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Occasionally",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q3",
     "questionNumber": 3,
     "questionText": "I join social group.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Often",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Sometimes",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Occasionally",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q4",
     "questionNumber": 4,
     "questionText": "I try to have close relationships with people.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "expressed-affection"
+      },
+      {
+        "text": "Often",
+        "status": "expressed-affection"
+      },
+      {
+        "text": "Sometimes",
+        "status": "none"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q5",
     "questionNumber": 5,
     "questionText": "I tend to join social organisations when I have an opportunity.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Often",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Sometimes",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Occasionally",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q6",
     "questionNumber": 6,
     "questionText": "I let other people strongly influence my actions.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Often",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Sometimes",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Occasionally",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q7",
     "questionNumber": 7,
     "questionText": "I try to be included in informal social activities.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Often",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Sometimes",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q8",
     "questionNumber": 8,
     "questionText": "I try to have close, personal relationship with people.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "expressed-affection"
+      },
+      {
+        "text": "Often",
+        "status": "expressed-affection"
+      },
+      {
+        "text": "Sometimes",
+        "status": "none"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q9",
     "questionNumber": 9,
     "questionText": "I try to include other people in my plans.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Often",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Sometimes",
+        "status": "none"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q10",
     "questionNumber": 10,
     "questionText": "I let other people control my actions.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Often",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Sometimes",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q11",
     "questionNumber": 11,
     "questionText": "I try to have people around me.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Often",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Sometimes",
+        "status": "none"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q12",
     "questionNumber": 12,
     "questionText": "I try to get close and personal with people.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "expressed-affection"
+      },
+      {
+        "text": "Often",
+        "status": "none"
+      },
+      {
+        "text": "Sometimes",
+        "status": "none"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q13",
     "questionNumber": 13,
     "questionText": "When people are doing things together I tend to join them.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Often",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Sometimes",
+        "status": "none"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q14",
     "questionNumber": 14,
     "questionText": "I am easily led by people.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Often",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Sometimes",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q15",
     "questionNumber": 15,
     "questionText": "I try to avoid being alone,",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Often",
+        "status": "none"
+      },
+      {
+        "text": "Sometimes",
+        "status": "none"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q16",
     "questionNumber": 16,
     "questionText": "I try to participate in group activities",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "expressed-inclusion"
+      },
+      {
+        "text": "Often",
+        "status": "none"
+      },
+      {
+        "text": "Sometimes",
+        "status": "none"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q17",
     "questionNumber": 17,
     "questionText": "I try to be friendly to people.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "expressed-affection"
+      },
+      {
+        "text": "Many People",
+        "status": "expressed-affection"
+      },
+      {
+        "text": "Some People",
+        "status": "none"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q18",
     "questionNumber": 18,
     "questionText": "I let other people decide what to do.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Many People",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Some People",
+        "status": "wanted-control"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q19",
     "questionNumber": 19,
     "questionText": "My personal relations with people are cool and distant.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "none"
+      },
+      {
+        "text": "Many People",
+        "status": "none"
+      },
+      {
+        "text": "Some People",
+        "status": "none"
+      },
+      {
+        "text": "A few people",
+        "status": "expressed-affection"
+      },
+      {
+        "text": "One or two people",
+        "status": "expressed-affection"
+      },
+      {
+        "text": "Nobody",
+        "status": "expressed-affection"
+      }
+    ]
   },
   {
     "id": "firob-q20",
     "questionNumber": 20,
     "questionText": "I let other people take charge of things.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Many People",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Some People",
+        "status": "wanted-control"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q21",
     "questionNumber": 21,
     "questionText": "I try to have close relationships with people.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "expressed-affection"
+      },
+      {
+        "text": "Many People",
+        "status": "expressed-affection"
+      },
+      {
+        "text": "Some People",
+        "status": "none"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q22",
     "questionNumber": 22,
     "questionText": "I let other people strongly influence my actions.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Many People",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Some People",
+        "status": "wanted-control"
+      },
+      {
+        "text": "A few people",
+        "status": "wanted-control"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q23",
     "questionNumber": 23,
     "questionText": "I try to get close and personal with people.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "expressed-affection"
+      },
+      {
+        "text": "Many People",
+        "status": "expressed-affection"
+      },
+      {
+        "text": "Some People",
+        "status": "none"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q24",
     "questionNumber": 24,
     "questionText": "I let other people control my actions.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Many People",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Some People",
+        "status": "wanted-control"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q25",
     "questionNumber": 25,
     "questionText": "I act cool and distant with people.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "none"
+      },
+      {
+        "text": "Many People",
+        "status": "none"
+      },
+      {
+        "text": "Some People",
+        "status": "none"
+      },
+      {
+        "text": "A few people",
+        "status": "expressed-affection"
+      },
+      {
+        "text": "One or two people",
+        "status": "expressed-affection"
+      },
+      {
+        "text": "Nobody",
+        "status": "expressed-affection"
+      }
+    ]
   },
   {
     "id": "firob-q26",
     "questionNumber": 26,
     "questionText": "I am easily led by people.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Many People",
+        "status": "wanted-control"
+      },
+      {
+        "text": "Some People",
+        "status": "wanted-control"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q27",
     "questionNumber": 27,
     "questionText": "I try to have close, personal relationships with people.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "expressed-affection"
+      },
+      {
+        "text": "Many People",
+        "status": "expressed-affection"
+      },
+      {
+        "text": "Some People",
+        "status": "none"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q28",
     "questionNumber": 28,
     "questionText": "I like people to invite me to things.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "wanted-inclusion"
+      },
+      {
+        "text": "Many People",
+        "status": "wanted-inclusion"
+      },
+      {
+        "text": "Some People",
+        "status": "none"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q29",
     "questionNumber": 29,
     "questionText": "I like people to act close and personal with me.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "wanted-affection"
+      },
+      {
+        "text": "Many People",
+        "status": "wanted-affection"
+      },
+      {
+        "text": "Some People",
+        "status": "none"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q30",
     "questionNumber": 30,
     "questionText": "I try to influence strongly other people's actions.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Many People",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Some People",
+        "status": "expressed-control"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q31",
     "questionNumber": 31,
     "questionText": "I like people to invite me to join in their activities.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "wanted-inclusion"
+      },
+      {
+        "text": "Many People",
+        "status": "wanted-inclusion"
+      },
+      {
+        "text": "Some People",
+        "status": "none"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q32",
     "questionNumber": 32,
     "questionText": "I like people to act close towards me.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "wanted-affection"
+      },
+      {
+        "text": "Many People",
+        "status": "wanted-affection"
+      },
+      {
+        "text": "Some People",
+        "status": "none"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q33",
     "questionNumber": 33,
     "questionText": "I try to take charge of things when I am with people.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Many People",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Some People",
+        "status": "expressed-control"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q34",
     "questionNumber": 34,
     "questionText": "I like people to include me in their activities.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "wanted-inclusion"
+      },
+      {
+        "text": "Many People",
+        "status": "wanted-inclusion"
+      },
+      {
+        "text": "Some People",
+        "status": "none"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q35",
     "questionNumber": 35,
     "questionText": "I like people to act cool and distant towards me.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "none"
+      },
+      {
+        "text": "Many People",
+        "status": "none"
+      },
+      {
+        "text": "Some People",
+        "status": "none"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "wanted-affection"
+      },
+      {
+        "text": "Nobody",
+        "status": "wanted-affection"
+      }
+    ]
   },
   {
     "id": "firob-q36",
     "questionNumber": 36,
     "questionText": "I try to have other people do things the way I want them done.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Many People",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Some People",
+        "status": "none"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q37",
     "questionNumber": 37,
     "questionText": "I like people to ask me to participate in their discussions.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "wanted-inclusion"
+      },
+      {
+        "text": "Many People",
+        "status": "none"
+      },
+      {
+        "text": "Some People",
+        "status": "none"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q38",
     "questionNumber": 38,
     "questionText": "I like people to act friendly towards me.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "wanted-affection"
+      },
+      {
+        "text": "Many People",
+        "status": "wanted-affection"
+      },
+      {
+        "text": "Some People",
+        "status": "none"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q39",
     "questionNumber": 39,
     "questionText": "I like people to invite me to participate in their activities.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "wanted-inclusion"
+      },
+      {
+        "text": "Many People",
+        "status": "none"
+      },
+      {
+        "text": "Some People",
+        "status": "none"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "none"
+      },
+      {
+        "text": "Nobody",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q40",
     "questionNumber": 40,
     "questionText": "I like people to act distant towards me.",
-    "options": ["Most People", "Many People", "Some People", "A few people", "One or two people", "Nobody"]
+    "options": [
+      {
+        "text": "Most People",
+        "status": "none"
+      },
+      {
+        "text": "Many People",
+        "status": "none"
+      },
+      {
+        "text": "Some People",
+        "status": "none"
+      },
+      {
+        "text": "A few people",
+        "status": "none"
+      },
+      {
+        "text": "One or two people",
+        "status": "wanted-affection"
+      },
+      {
+        "text": "Nobody",
+        "status": "wanted-affection"
+      }
+    ]
   },
   {
     "id": "firob-q41",
     "questionNumber": 41,
     "questionText": "I try to be the dominant person when I am with people.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Often",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Sometimes",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Occasionally",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q42",
     "questionNumber": 42,
     "questionText": "I like people to invite me to things.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "wanted-inclusion"
+      },
+      {
+        "text": "Often",
+        "status": "wanted-inclusion"
+      },
+      {
+        "text": "Sometimes",
+        "status": "none"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q43",
     "questionNumber": 43,
     "questionText": "I like people to act close towards me.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "wanted-affection"
+      },
+      {
+        "text": "Often",
+        "status": "none"
+      },
+      {
+        "text": "Sometimes",
+        "status": "none"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q44",
     "questionNumber": 44,
     "questionText": "I try to have other people do things I want them done.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Often",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Sometimes",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q45",
     "questionNumber": 45,
     "questionText": "I like people to invite me to join their activities.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "wanted-inclusion"
+      },
+      {
+        "text": "Often",
+        "status": "wanted-inclusion"
+      },
+      {
+        "text": "Sometimes",
+        "status": "none"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q46",
     "questionNumber": 46,
     "questionText": "I like people to act cool and distant towards me.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "none"
+      },
+      {
+        "text": "Often",
+        "status": "none"
+      },
+      {
+        "text": "Sometimes",
+        "status": "none"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "wanted-affection"
+      },
+      {
+        "text": "Never",
+        "status": "wanted-affection"
+      }
+    ]
   },
   {
     "id": "firob-q47",
     "questionNumber": 47,
     "questionText": "I try to influence strongly other people's action.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Often",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Sometimes",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q48",
     "questionNumber": 48,
     "questionText": "I like people to include me in their activities.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "wanted-inclusion"
+      },
+      {
+        "text": "Often",
+        "status": "wanted-inclusion"
+      },
+      {
+        "text": "Sometimes",
+        "status": "none"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q49",
     "questionNumber": 49,
     "questionText": "I like people to act close and personal with me.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "wanted-affection"
+      },
+      {
+        "text": "Often",
+        "status": "wanted-affection"
+      },
+      {
+        "text": "Sometimes",
+        "status": "none"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q50",
     "questionNumber": 50,
     "questionText": "I try to take charge of things when I am with people.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Often",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Sometimes",
+        "status": "none"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q51",
     "questionNumber": 51,
     "questionText": "I like people to invite me to participate in their activities.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "wanted-inclusion"
+      },
+      {
+        "text": "Often",
+        "status": "wanted-inclusion"
+      },
+      {
+        "text": "Sometimes",
+        "status": "none"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q52",
     "questionNumber": 52,
     "questionText": "I like people to act distant towards me.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "none"
+      },
+      {
+        "text": "Often",
+        "status": "none"
+      },
+      {
+        "text": "Sometimes",
+        "status": "none"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "wanted-affection"
+      },
+      {
+        "text": "Never",
+        "status": "wanted-affection"
+      }
+    ]
   },
   {
     "id": "firob-q53",
     "questionNumber": 53,
     "questionText": "I try to have other people do things the way I want them done.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Often",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Sometimes",
+        "status": "none"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   },
   {
     "id": "firob-q54",
     "questionNumber": 54,
     "questionText": "I take charge of things when I am with people.",
-    "options": ["Usually", "Often", "Sometimes", "Occasionally", "Rarely", "Never"]
+    "options": [
+      {
+        "text": "Usually",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Often",
+        "status": "expressed-control"
+      },
+      {
+        "text": "Sometimes",
+        "status": "none"
+      },
+      {
+        "text": "Occasionally",
+        "status": "none"
+      },
+      {
+        "text": "Rarely",
+        "status": "none"
+      },
+      {
+        "text": "Never",
+        "status": "none"
+      }
+    ]
   }
 ]
