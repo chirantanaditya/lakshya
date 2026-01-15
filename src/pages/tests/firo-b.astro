@@ -2,11 +2,11 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import TestContainer from '../../components/TestContainer';
+import FiroBTest from '../../components/FiroBTest';
 import { getSession } from '../../lib/session';
 import { getUserById } from '../../lib/auth';
-import { db } from '../../db';
-import { firoBQuestions } from '../../db/schema';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 
 const session = await getSession(Astro.cookies);
 
@@ -24,17 +24,36 @@ if (user.firoBStatus === 'Completed') {
   return Astro.redirect('/dashboard');
 }
 
-const questions = await db
-  .select()
-  .from(firoBQuestions)
-  .orderBy(firoBQuestions.questionNumber);
-
-const formattedQuestions = questions.map((q) => ({
-  id: q.id,
-  questionNumber: q.questionNumber || '',
-  questionText: q.questionText || '',
-  options: (q.options as string[]) || [],
-}));
+// Load questions from JSON file
+let questions: Array<{ id: string; questionNumber: number; questionText: string; options: string[] }> = [];
+try {
+  const jsonPath = join(process.cwd(), 'data', 'firo-b-questions.json');
+  const fileContent = readFileSync(jsonPath, 'utf-8');
+  const questionsData = JSON.parse(fileContent);
+  
+  questions = questionsData.map((q: any) => ({
+    id: q.id || `firob-q${q.questionNumber}`,
+    questionNumber: q.questionNumber,
+    questionText: q.questionText,
+    options: q.options || [],
+  }));
+} catch (error: any) {
+  console.error('Error loading Firo-B questions:', error);
+  // Fallback: try loading from database if JSON fails
+  const { db } = await import('../../db');
+  const { firoBQuestions } = await import('../../db/schema');
+  const dbQuestions = await db
+    .select()
+    .from(firoBQuestions)
+    .orderBy(firoBQuestions.questionNumber);
+  
+  questions = dbQuestions.map((q, index) => ({
+    id: q.id,
+    questionNumber: parseInt(q.questionNumber || String(index + 1)) || index + 1,
+    questionText: q.questionText || '',
+    options: (q.options as string[]) || [],
+  }));
+}
 ---
 
 <BaseLayout title="FIRO-B | Lakshya Counselling">
@@ -42,11 +61,9 @@ const formattedQuestions = questions.map((q) => ({
   
   <main class="min-h-screen py-12 bg-gray-50">
     <div class="container mx-auto px-4">
-      <TestContainer
+      <FiroBTest
         client:load
-        testType="firo-b"
-        testName="FIRO-B - Fundamental Interpersonal Relations Orientation"
-        questions={formattedQuestions}
+        questions={questions}
         onSubmit={async (responses) => {
           const response = await fetch('/api/tests/submit', {
             method: 'POST',

@@ -20,7 +20,7 @@ const config: runtime.GetPrismaClientConfig = {
   "clientVersion": "7.2.0",
   "engineVersion": "0c8ef2ce45c83248ab3df073180d5eda9e8be7a3",
   "activeProvider": "postgresql",
-  "inlineSchema": "generator client {\n  provider = \"prisma-client\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  // url removed - now configured in prisma.config.ts for Prisma 7\n}\n\n// Models will be added here\n// You can introspect your existing database with: npx prisma db pull\n",
+  "inlineSchema": "generator client {\n  provider = \"prisma-client\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  // url removed - now configured in prisma.config.ts for Prisma 7\n}\n\n// Models will be added here\n// You can introspect your existing database with: pnpx prisma db pull\n",
   "runtimeDataModel": {
     "models": {},
     "enums": {},
